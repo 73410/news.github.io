@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sat, 22 Jun 2024 10:17:19 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>6月22日更新公告</title><link>https://73410.github.io/news.github.io/post/6-yue-22-ri-geng-xin-gong-gao.html</link><description>## 1. 故障及简述&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sat, 29 Jun 2024 12:40:52 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>6月29日更新公告 </title><link>https://73410.github.io/news.github.io/post/6-yue-29-ri-geng-xin-gong-gao-%20.html</link><description>## 一、 主要更新&#13;
+1. 将服务器版本更新至**1.20.6**&#13;
+2. 更新了**velocity**&#13;
+3. 对一些插件和数据包进行了更改以适应版本更新&#13;
+## 二、对插件做了以下更改&#13;
+- 更新了卫星地图插件&#13;
+- 删除了playercdk&#13;
+- 删除了blocklocker&#13;
+## 三、删除了数据包&#13;
+删除了一个数据包以适应版本更新&#13;
+## 四、结尾&#13;
+![图片](https://mcpcc.fun/static/picture/srv2.png)。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/6-yue-29-ri-geng-xin-gong-gao-%20.html</guid><pubDate>Sat, 29 Jun 2024 12:40:26 +0000</pubDate></item><item><title>6月22日更新公告</title><link>https://73410.github.io/news.github.io/post/6-yue-22-ri-geng-xin-gong-gao.html</link><description>## 1. 故障及简述&#13;
 由于回档插件数据库故障导致服务器无法正常运行，经综合考虑决定**删除**旧的数据。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/6-yue-22-ri-geng-xin-gong-gao.html</guid><pubDate>Sat, 22 Jun 2024 10:06:45 +0000</pubDate></item><item><title>关于PCC三周目反馈</title><link>https://73410.github.io/news.github.io/post/guan-yu-PCC-san-zhou-mu-fan-kui.html</link><description>PCC**三周目**计划现已启动，如果有什么建议可以给我们提供**反馈&#13;
 [链接](https://www.wjx.cn/vm/eKBLqaY.aspx#)**。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/guan-yu-PCC-san-zhou-mu-fan-kui.html</guid><pubDate>Sat, 22 Jun 2024 06:31:16 +0000</pubDate></item><item><title>ip端口</title><link>https://73410.github.io/news.github.io/post/ip-duan-kou.html</link><description>## Java版&#13;
 ip：**srv.mcpcc.fun**&#13;
