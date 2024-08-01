@@ -10,13 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 一、指令概述
-## 1.基础命令
-- **/res ? [页码]**：显示帮助菜单。">
+<meta name="description" content="# 一、更详细的用法
+## 1.圈地具体步骤
+1. 使用选择工具（通常是木斧）或命令选择要保护的地块。">
 <meta property="og:title" content="领地插件使用指南">
-<meta property="og:description" content="# 一、指令概述
-## 1.基础命令
-- **/res ? [页码]**：显示帮助菜单。">
+<meta property="og:description" content="# 一、更详细的用法
+## 1.圈地具体步骤
+1. 使用选择工具（通常是木斧）或命令选择要保护的地块。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://73410.github.io/news.github.io/post/ling-di-cha-jian-shi-yong-zhi-nan.html">
 <meta property="og:image" content="https://mcpcc.fun/static/picture/logo.webp">
@@ -76,7 +76,42 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>一、指令概述</h1>
+<div class="markdown-body" id="postBody"><h1>一、更详细的用法</h1>
+<h2>1.圈地具体步骤</h2>
+<ol>
+<li>使用选择工具（通常是木斧）或命令选择要保护的地块。</li>
+<li>输入 <code class="notranslate">/res create [ResidenceName]</code> 创建保护区，为其命名。</li>
+<li>设置适当的规则和权限，确保只有授权人员可以在您的地盘上进行活动。</li>
+<li>如果需要，可以通过 <code class="notranslate">/res set</code> 命令进一步细化权限设置，如禁止PvP、阻止怪物生成等。</li>
+</ol>
+<h2>2.选择区域</h2>
+<ul>
+<li><strong>/res select [x y z]</strong>: 使用该命令选择一个立方体区域。例如 <code class="notranslate">/res select 10 5 10</code> 会在你所站立的位置选择一个宽21格、高11格、长21格的区域。</li>
+<li><strong>/res select chunk</strong>: 选择你所在的整个区块，通常用于快速设定一个较大的标准区域。</li>
+<li><strong>/res select auto</strong>: 开启自动选择模式，会根据你移动的区域自动扩展选择范围。</li>
+</ul>
+<h2>3.创建与管理住宅</h2>
+<ul>
+<li><strong>/res create [ResidenceName]</strong>: 创建一个新的住宅区域，例如 <code class="notranslate">/res create Home</code> 将创建名为 "Home" 的住宅。</li>
+<li><strong>/res remove [ResidenceName]</strong>: 删除一个已存在的住宅，例如 <code class="notranslate">/res remove Home</code> 会删除名为 "Home" 的住宅。</li>
+<li><strong>/res auto [ResidenceName] [radius]</strong>: 在你周围自动创建一个指定半径的住宅区域，例如 <code class="notranslate">/res auto Home 15</code> 会在你周围15格范围内创建名为 "Home" 的住宅。</li>
+</ul>
+<h2>4.信息查询</h2>
+<ul>
+<li><strong>/res info [ResidenceName]</strong>: 查询指定住宅的详细信息，如果不加住宅名则查询你所在的住宅，例如 <code class="notranslate">/res info Home</code>。</li>
+<li><strong>/res list [player]</strong>: 列出指定玩家拥有的所有住宅，或使用 <code class="notranslate">/res list</code> 列出自己的所有住宅。</li>
+</ul>
+<h2>5.设置权限与规则</h2>
+<ul>
+<li><strong>/res set [ResidenceName] [flag] [true/false/remove]</strong>: 为指定的住宅设置特定的规则（标志），例如 <code class="notranslate">/res set Home pvp false</code> 会在 "Home" 的住宅区域内禁止 PvP。</li>
+<li><strong>/res gset [GroupName] [flag] [true/false/remove]</strong>: 对指定的组设置权限规则，这通常用于管理不同的玩家组，例如 <code class="notranslate">/res gset friends build true</code> 允许 "friends" 组的成员在所有住宅内建造。</li>
+</ul>
+<h2>6.经济与市场</h2>
+<ul>
+<li><strong>/res market sell [ResidenceName] [amount]</strong>: 将住宅公开出售，设定价格，例如 <code class="notranslate">/res market sell Home 500</code> 将 "Home" 以500单位货币的价格出售。</li>
+<li><strong>/res lease renew [ResidenceName]</strong>: 更新住宅的租约，如果使用了经济系统，此命令可能涉及费用。</li>
+</ul>
+<h1>二、指令概述</h1>
 <h2>1.基础命令</h2>
 <ul>
 <li><strong>/res ? [页码]</strong>：显示帮助菜单。使用页码可以浏览不同的帮助文档页面。</li>
@@ -160,41 +195,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li><strong>/res market info [住宅]</strong>：查看出售住宅的信息。</li>
 <li><strong>/res market sell [住宅] [金额]</strong>：将住宅挂出出售。</li>
 <li><strong>/res market unsell [住宅]</strong>：停止出售住宅。</li>
-</ul>
-<h1>二、更详细的用法</h1>
-<h2>1.圈地具体步骤</h2>
-<ol>
-<li>使用选择工具（通常是木斧）或命令选择要保护的地块。</li>
-<li>输入 <code class="notranslate">/res create [ResidenceName]</code> 创建保护区，为其命名。</li>
-<li>设置适当的规则和权限，确保只有授权人员可以在您的地盘上进行活动。</li>
-<li>如果需要，可以通过 <code class="notranslate">/res set</code> 命令进一步细化权限设置，如禁止PvP、阻止怪物生成等。</li>
-</ol>
-<h2>2.选择区域</h2>
-<ul>
-<li><strong>/res select [x y z]</strong>: 使用该命令选择一个立方体区域。例如 <code class="notranslate">/res select 10 5 10</code> 会在你所站立的位置选择一个宽21格、高11格、长21格的区域。</li>
-<li><strong>/res select chunk</strong>: 选择你所在的整个区块，通常用于快速设定一个较大的标准区域。</li>
-<li><strong>/res select auto</strong>: 开启自动选择模式，会根据你移动的区域自动扩展选择范围。</li>
-</ul>
-<h2>3.创建与管理住宅</h2>
-<ul>
-<li><strong>/res create [ResidenceName]</strong>: 创建一个新的住宅区域，例如 <code class="notranslate">/res create Home</code> 将创建名为 "Home" 的住宅。</li>
-<li><strong>/res remove [ResidenceName]</strong>: 删除一个已存在的住宅，例如 <code class="notranslate">/res remove Home</code> 会删除名为 "Home" 的住宅。</li>
-<li><strong>/res auto [ResidenceName] [radius]</strong>: 在你周围自动创建一个指定半径的住宅区域，例如 <code class="notranslate">/res auto Home 15</code> 会在你周围15格范围内创建名为 "Home" 的住宅。</li>
-</ul>
-<h2>4.信息查询</h2>
-<ul>
-<li><strong>/res info [ResidenceName]</strong>: 查询指定住宅的详细信息，如果不加住宅名则查询你所在的住宅，例如 <code class="notranslate">/res info Home</code>。</li>
-<li><strong>/res list [player]</strong>: 列出指定玩家拥有的所有住宅，或使用 <code class="notranslate">/res list</code> 列出自己的所有住宅。</li>
-</ul>
-<h2>5.设置权限与规则</h2>
-<ul>
-<li><strong>/res set [ResidenceName] [flag] [true/false/remove]</strong>: 为指定的住宅设置特定的规则（标志），例如 <code class="notranslate">/res set Home pvp false</code> 会在 "Home" 的住宅区域内禁止 PvP。</li>
-<li><strong>/res gset [GroupName] [flag] [true/false/remove]</strong>: 对指定的组设置权限规则，这通常用于管理不同的玩家组，例如 <code class="notranslate">/res gset friends build true</code> 允许 "friends" 组的成员在所有住宅内建造。</li>
-</ul>
-<h2>6.经济与市场</h2>
-<ul>
-<li><strong>/res market sell [ResidenceName] [amount]</strong>: 将住宅公开出售，设定价格，例如 <code class="notranslate">/res market sell Home 500</code> 将 "Home" 以500单位货币的价格出售。</li>
-<li><strong>/res lease renew [ResidenceName]</strong>: 更新住宅的租约，如果使用了经济系统，此命令可能涉及费用。</li>
 </ul>
 <h1>三、查看更多</h1>
 <p>有关每个命令的更详细信息和使用方法，可以参考官方 <a href="https://www.zrips.net/residence/commands/" rel="nofollow">Residence 文档</a></p></div>
