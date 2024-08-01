@@ -71,4 +71,4 @@
 
 ---
 
-以上命令和提示可以帮助玩家有效地创建和管理商店，提高游戏中的交易体验。有关更多详细信息，请访问插件页面：[QuickShop-Hikari 插件](https://www.spigotmc.org/resources/quickshop-hikari.114602/)
+以上命令和提示可以帮助玩家有效地创建和管理商店，提高游戏中的交易体验。有关更多详细信息，请访问插件页面：[QuickShop-Hikari 插件](https://www.spigotmc.org/resources/quickshop-hikari-a-powerful-user-friendly-and-relieable-chestshop-plugin-1-18-2-1-21.100125/)
