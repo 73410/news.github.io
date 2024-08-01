@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Thu, 01 Aug 2024 10:35:44 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>QuickShop-Hikari （箱子商店）使用指南</title><link>https://73410.github.io/news.github.io/post/QuickShop-Hikari%20%EF%BC%88-xiang-zi-shang-dian-%EF%BC%89-shi-yong-zhi-nan.html</link><description>### 玩家手册：QuickShop-Hikari 使用指南&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Thu, 01 Aug 2024 10:53:28 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>QuickShop-Hikari （箱子商店）使用指南</title><link>https://73410.github.io/news.github.io/post/QuickShop-Hikari%20%EF%BC%88-xiang-zi-shang-dian-%EF%BC%89-shi-yong-zhi-nan.html</link><description>### 玩家手册：QuickShop-Hikari 使用指南&#13;
 &#13;
 ---&#13;
 &#13;
@@ -19,7 +19,12 @@
 &gt; pcc三周目将在8月1日前与大家见面&#13;
 。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/er-zhou-mu-cun-dang-xian-yi-gong-kai.html</guid><pubDate>Sat, 27 Jul 2024 00:17:11 +0000</pubDate></item><item><title>领地插件使用指南</title><link>https://73410.github.io/news.github.io/post/ling-di-cha-jian-shi-yong-zhi-nan.html</link><description># 一、更详细的用法&#13;
 ## 1.圈地具体步骤&#13;
-1. 使用选择工具（通常是木斧）或命令选择要保护的地块。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/ling-di-cha-jian-shi-yong-zhi-nan.html</guid><pubDate>Sat, 29 Jun 2024 13:31:29 +0000</pubDate></item><item><title>6月29日更新公告 </title><link>https://73410.github.io/news.github.io/post/6-yue-29-ri-geng-xin-gong-gao-%20.html</link><description>## 一、 主要更新&#13;
+1.用木锄左键领地左上角，右键右下角&#13;
+2.使用指令/res create 名字&#13;
+3.使用指令/res set 来设置领地权限&#13;
+更多内容在游戏中使用/res来自行查看&#13;
+## 2.选择区域&#13;
+- **/res select [x y z]**: 使用该命令选择一个立方体区域。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/ling-di-cha-jian-shi-yong-zhi-nan.html</guid><pubDate>Sat, 29 Jun 2024 13:31:29 +0000</pubDate></item><item><title>6月29日更新公告 </title><link>https://73410.github.io/news.github.io/post/6-yue-29-ri-geng-xin-gong-gao-%20.html</link><description>## 一、 主要更新&#13;
 1. 将服务器版本更新至**1.20.6**&#13;
 2. 更新了**velocity**&#13;
 3. 对一些插件和数据包进行了更改以适应版本更新&#13;
