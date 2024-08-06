@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Thu, 01 Aug 2024 10:53:28 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>QuickShop-Hikari （箱子商店）使用指南</title><link>https://73410.github.io/news.github.io/post/QuickShop-Hikari%20%EF%BC%88-xiang-zi-shang-dian-%EF%BC%89-shi-yong-zhi-nan.html</link><description>### 玩家手册：QuickShop-Hikari 使用指南&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Tue, 06 Aug 2024 03:24:31 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>8月6日更新公告</title><link>https://73410.github.io/news.github.io/post/8-yue-6-ri-geng-xin-gong-gao.html</link><description># 一、更新了商店插件&#13;
+现在商店会**随机**不定期刷新一些物品来供购买，每个物品**总存货货量**为64&#13;
+# 二、更新了数据包&#13;
+现在可以合成**附魔金苹果**了&#13;
+---&#13;
+合成表如下&#13;
+## 第一种&#13;
+| 索引 | 1  | 2 | 3 |&#13;
+| ------------- | ------------- | ------------- | ------------- |&#13;
+| 1 | 钻石块  | 钻石块  | 钻石块 |&#13;
+| 2 | 钻石块  | 金苹果  | 钻石块 |&#13;
+| 3 | 钻石块  | 钻石块  | 钻石块 |&#13;
+## 第二种&#13;
+| 索引 | 1  | 2 | 3 |&#13;
+| ------------- | ------------- | ------------- | ------------- |&#13;
+| 1 | 钻石块  | 下界合金块  | 钻石块 |&#13;
+| 2 | 下界合金块  | 苹果  | 下界合金块 |&#13;
+| 3 | 钻石块  | 下界合金块  | 钻石块 |。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/8-yue-6-ri-geng-xin-gong-gao.html</guid><pubDate>Tue, 06 Aug 2024 03:24:03 +0000</pubDate></item><item><title>QuickShop-Hikari （箱子商店）使用指南</title><link>https://73410.github.io/news.github.io/post/QuickShop-Hikari%20%EF%BC%88-xiang-zi-shang-dian-%EF%BC%89-shi-yong-zhi-nan.html</link><description>### 玩家手册：QuickShop-Hikari 使用指南&#13;
 &#13;
 ---&#13;
 &#13;
