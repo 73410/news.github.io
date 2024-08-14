@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Wed, 14 Aug 2024 01:49:29 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>检举揭发</title><link>https://73410.github.io/news.github.io/post/jian-ju-jie-fa.html</link><description>来自: 'smallchen' &lt;chen123kj@126.com&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Wed, 14 Aug 2024 01:50:02 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>检举揭发</title><link>https://73410.github.io/news.github.io/post/jian-ju-jie-fa.html</link><description>来自: 'smallchen' &lt;chen123kj@126.com&gt;
 
 邮件内容:
 
 �Ҿٱ�
-�ֺ������Ҷ���。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/jian-ju-jie-fa.html</guid><pubDate>Wed, 14 Aug 2024 01:48:56 +0000</pubDate></item><item><title>《PCC服务器治安管理处罚法》</title><link>https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-fa-%E3%80%8B.html</link><description># 一、前言:&#13;
+�ֺ������Ҷ���。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/jian-ju-jie-fa.html</guid><pubDate>Wed, 14 Aug 2024 01:48:56 +0000</pubDate></item><item><title>《PCC服务器治安管理处罚条例》</title><link>https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</link><description># 一、前言:&#13;
 依据 `《中华人民共和国宪法》`制定本法&#13;
 &gt; [!NOTE]&#13;
 &gt; 下列规定中**最左侧**的`字母`为该类违规所属的`违规等级`&#13;
@@ -37,7 +37,7 @@
     - 仅仅有两次试错机会&#13;
 3. C级&#13;
     - ban（1日-1周）&#13;
-    - 仅仅有两次试错机会。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-fa-%E3%80%8B.html</guid><pubDate>Tue, 13 Aug 2024 12:41:51 +0000</pubDate></item><item><title>8月6日更新公告</title><link>https://73410.github.io/news.github.io/post/8-yue-6-ri-geng-xin-gong-gao.html</link><description># 一、更新了商店插件&#13;
+    - 仅仅有两次试错机会。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</guid><pubDate>Tue, 13 Aug 2024 12:41:51 +0000</pubDate></item><item><title>8月6日更新公告</title><link>https://73410.github.io/news.github.io/post/8-yue-6-ri-geng-xin-gong-gao.html</link><description># 一、更新了商店插件&#13;
 现在商店会**随机**不定期刷新一些物品来供购买，每个物品**总存货货量**为64&#13;
 # 二、更新了数据包&#13;
 现在可以合成**附魔金苹果**了&#13;
