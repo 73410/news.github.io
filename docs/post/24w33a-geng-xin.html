@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://mcpcc.fun/static/picture/logo.webp"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="## 实验性特性
+下列更改仅在其实验性开关打开时生效，可以通过激活相应的数据包或者在创建世界时在实验性界面打开。">
+<meta property="og:title" content="24w33a更新">
+<meta property="og:description" content="## 实验性特性
+下列更改仅在其实验性开关打开时生效，可以通过激活相应的数据包或者在创建世界时在实验性界面打开。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://73410.github.io/news.github.io/post/24w33a-geng-xin.html">
+<meta property="og:image" content="https://mcpcc.fun/static/picture/logo.webp">
+<title>24w33a更新</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">24w33a更新</h1>
+<div class="title-right">
+    <a href="https://73410.github.io/news.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/73410/news.github.io/issues/26" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2>实验性特性</h2>
+<p>下列更改仅在其实验性开关打开时生效，可以通过激活相应的数据包或者在创建世界时在实验性界面打开。</p>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>这些实验性特性除非被启用否则没有任何效果。你可以通过<a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" rel="nofollow">这里</a>了解更多信息。</p>
+</div>
+<h3>收纳袋</h3>
+<p>收纳袋回来了！收纳袋曾在 2020 年作为实验性特性被加入 Java 版。现在我们再次在收纳袋上大展手脚！要测试收纳袋，你必须在创建新世界时打开收纳袋实验性开关。（当创建新世界时点击“更多”，然后点击“实验性内容”，然后点击挨着“收纳袋”这个词右侧的按钮）。收纳袋是一个可以让你在同一个物品栏槽中叠放不同的方块和物品的物品。一个收纳袋可以使你一起打包这些物品并且不浪费空间。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/43fddd64b12a6bfa5aa77089786b01373584b9ac9a363f02e39bbfdd803f3aee/68747470733a2f2f696d6167652e7374617078732e636e2f692f323032342f30382f31362f62756e646c655f6265666f72655f61667465725f696d6167652d312e6a7067"><img src="https://camo.githubusercontent.com/43fddd64b12a6bfa5aa77089786b01373584b9ac9a363f02e39bbfdd803f3aee/68747470733a2f2f696d6167652e7374617078732e636e2f692f323032342f30382f31362f62756e646c655f6265666f72655f61667465725f696d6167652d312e6a7067" alt="" data-canonical-src="https://image.stapxs.cn/i/2024/08/16/bundle_before_after_image-1.jpg" style="max-width: 100%;"></a><br>
+收纳袋拥有一个能够显示其内容物品的工具提示。如果收纳袋拥有最多八种物品类型，你能够见到所有物品并能够立即拽出任意物品。如果收纳袋拥有超过八种物品类型，一些物品行会被隐藏。这样你可能会想要制作一个新的收纳袋来轻松取出任意物品。一个收纳袋由一根线和一个皮革制成。敬请尝试这个全新版本的收纳袋并让我们听见你的想法。</p>
+<ul>
+<li>收纳袋只占一组空间（通常为 64 个物品）但却能容下许多不同种类的物品</li>
+<li>你可以直接从物品栏中将物品放入收纳袋中</li>
+<li>收纳袋拥有一个展示其内容物品的工具提示
+<ul>
+<li>如果收纳袋中拥有不多于八个物品类型，工具提示会将它们全部展示</li>
+<li>否则工具提示只会展示最上面的两行物品并且其它物品将会在下方隐藏</li>
+</ul>
+</li>
+<li>你可以选择任何可见的物品将其拽出收纳袋
+<ul>
+<li>右键单击来取出第一个物品</li>
+<li>使用数字键或鼠标滚轮来选择不同的物品，然后右键单击取出</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>开发者提示：在原本的收纳袋实验性中你只能选取最顶上的物品。我们得到了许多反馈说玩家想要更加灵活地取出物品。因此我们我们在收纳袋中放入了子菜单，这在之前的 Minecraft 中从来没有做过！</p>
+</blockquote>
+<ul>
+<li>当在选择要被取出的物品时，收纳袋图标会展示物品在收纳袋中取出</li>
+<li>当手持收纳袋时，你可以通过右键将其中的物品全部抖出来</li>
+<li>在皮革上放一根线能够合成收纳袋</li>
+</ul>
+<blockquote>
+<p>开发者提示：收纳袋的原型曾造价更高并使用兔子皮这种仅在几个群系能够获取到的物品，所以晚间不得不探索来获得他们的第一个收纳袋。在这个版本中，我们使其造价更低并且使其成为在近乎任何群系你都可以制造的物品。我们想要你在新世界时更加简单地华获取收纳袋并用在你的前期探险中。</p>
+</blockquote>
+<ul>
+<li>控制已从原型更改：
+<ul>
+<li>左键单击将物品放入收纳袋</li>
+<li>右键将最顶部物品移出收纳袋</li>
+<li>当收纳袋工具提示可见时，使用数字键或鼠标滚轮来选择不同的物品然后使用右键来移除</li>
+</ul>
+</li>
+</ul>
+<h3>红石实验性</h3>
+<p>增加了新的实验性特性包括多种红石相关的更改。可以在创建世界时通过选择 “Redstone Experiments” 在实验性菜单中启用这些更改。</p>
+<p>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</p>
+<h4>红石线</h4>
+<ul>
+<li>红石线（互相连接的红石粉方块）的性能得到了改进</li>
+<li>红石线现在仅探测来源于红石线上的可能会使其收到能量的方块更新</li>
+<li>在红石线导致方块更新之前，与其相连的所有红石线会被设置为新的信号强度</li>
+<li>红石线导致的更新顺序已被改变
+<ul>
+<li>目的是保证红石线工作一致性，与位置与方向无关</li>
+<li>基于导致更新的上下文，当可能时顺序是确定的</li>
+<li>当没有足够的上下文来决定顺序时，采用随机</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>开发者提示：我们知道在红石中通常随机性是不想要的。在此使用它是因为只要它合理我们就会让它确定，但是有时它就是那么不合理 —— 并且我们不想要那些暗中的规定（就像基于位置的哈希！）来决定顺序并且使得机器在不同位置或不同朝向时工作不一致。<br>
+下面的截图展示了“随机”与“非随机”红石线的一个例子 —— 我们认为它挺合乎逻辑的并且其在玩家控制下可以建造出行为确定的机器。<br>
+但我们仍想要倾听你们的想法并将其付诸实践！</p>
+</blockquote>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c2ddd6a2c0572830983eb0a2f9962a1334ae97d9cccad71818fc4caafcd88520/68747470733a2f2f696d6167652e7374617078732e636e2f692f323032342f30382f31362f72656473746f6e652d312e6a7067"><img src="https://camo.githubusercontent.com/c2ddd6a2c0572830983eb0a2f9962a1334ae97d9cccad71818fc4caafcd88520/68747470733a2f2f696d6167652e7374617078732e636e2f692f323032342f30382f31362f72656473746f6e652d312e6a7067" alt="" title="左 随机 右" data-canonical-src="https://image.stapxs.cn/i/2024/08/16/redstone-1.jpg" style="max-width: 100%;"></a></p>
+<h5>红石线更改的顺序</h5>
+<ul>
+<li>当一条线上的红石粉激活时，更靠近信号源的的方块会最先更新</li>
+<li>当一条线上的红石粉反激活时，曾更靠近信号源的的方块会最先更新</li>
+<li>当两条红石线对信号源拥有同样的距离，谁会最先导致方块更新为随机
+<ul>
+<li>随机选择会在整条线上的红石粉上做一次，以限制可能导致的结果数量</li>
+<li>其意味着，当从旁边激活一条红石线，它会随机选择两个可能激活的顺序的其中一个</li>
+<li>优点是拥有少的可能的更新顺序并且使得结果更加能够预测</li>
+</ul>
+</li>
+</ul>
+<h5>红石线周侧方块更新</h5>
+<ul>
+<li>在红石线周围的方块更新的顺序基于红石线从哪个方向接受更新</li>
+<li>当前，顺序为：背面，正面，左侧，右侧，底面，顶面
+<ul>
+<li>左侧和右侧可能颠倒，基于红石线的随机选择</li>
+</ul>
+</li>
+<li>当更新传值实体方块时也和此更新顺序一致</li>
+</ul>
+<h4>已知问题</h4>
+<p>因为此项实验性仅更改了红石线，与其它组件的可能不会一直像预期一样交互，尤其是更新顺序。</p>
+<h3>矿车改进</h3>
+<p>增加了新的实验性特性包含了许多对矿车的运动更改。可以在创建世界时通过在实验性菜单中选择 "Minecart Improvements" 来启用这些更改。</p>
+<p>我们的长期目标是车辆旅行，比如矿车，和其它目前主导的多数的游戏后期选项相比成为一个玩家可行的选择。为了达到这个目标我们意图使得乘坐矿车成为一种丝滑的体验，拥有一致和可预测的运动和旋转。通过此项特性开关我们正在给未来打下基础。我们意识到这些更改会毁坏现有的机器，这就是为什么我们想要和社区合作来塑造本次升级和未来乘坐矿车的体验。</p>
+<p>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</p>
+<p>我们很高兴能够听到你们对这些更改的想发：请在本<a href="https://aka.ms/fbcarts" rel="nofollow">反馈页面</a>分享你的反馈。</p>
+<h4>运动更改</h4>
+<ul>
+<li>一直在铁轨上高速行驶时，矿车会更好地表现自己的运动
+<ul>
+<li>矿车现在会沿轨道平滑转弯并且减少了骤停和脱轨的可能性</li>
+</ul>
+</li>
+<li>矿车现在拥有更好的跳跃
+<ul>
+<li>当铁轨以斜坡结束时矿车会保持垂直动量</li>
+<li>矿车在空中会有视觉上的倾斜表达</li>
+<li>矿车在空中飞行时不会播放铁轨摩擦声</li>
+</ul>
+</li>
+<li>增加了新的无障碍选项可以使玩家跟随其乘坐的矿车一同旋转
+<ul>
+<li>默认关闭</li>
+<li>仅在实验性特性启用的世界有效果</li>
+</ul>
+</li>
+<li>增加了新的游戏规则 <code class="notranslate">minecartMaxSpeed</code> 用于更改矿车的最高速度
+<ul>
+<li>默认设为 8，最高可设为 1000 方块每秒</li>
+<li>将其设为特定值不能保证矿车会达到特定的最高速度 —— 通过斜坡和动力铁轨增加的速度需要克服空气阻力以及类似效果</li>
+<li>此游戏规则仅存在于启用了本实验性特性的世界</li>
+</ul>
+</li>
+</ul>
+<h4>矿车更改</h4>
+<ul>
+<li>矿车现在不再能被玩家或发射器放进另一个矿车内了</li>
+<li>矿车现在可以沿着轨道一直紧邻着放置</li>
+<li>在铁轨上运动时矿车更一致地使生物骑乘</li>
+</ul>
+<h4>已知影响</h4>
+<ul>
+<li>我们意识到这些更改会导致某些机器比如 “piston bolts” 完全不工作，或其行为被更改</li>
+<li>由于是速度，移动距离，摩擦等等的微小变化，一些非常精确的轨道网络的时间会有变化</li>
+<li>依赖矿车卡在轨道上的机器不再工作或行为发生改变</li>
+</ul></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://73410.github.io/news.github.io">pcc新闻主页</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","73410/news.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
