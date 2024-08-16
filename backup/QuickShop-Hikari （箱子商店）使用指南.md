@@ -1,5 +1,5 @@
 ### 玩家手册：QuickShop-Hikari 使用指南
-
+QuickShop-Hikari 箱子商店的详细用法如下
 ---
 
 ### 1. 创建销售商店
