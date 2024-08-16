@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Fri, 16 Aug 2024 09:28:16 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>24w33a更新</title><link>https://73410.github.io/news.github.io/post/24w33a-geng-xin.html</link><description>## 实验性特性&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Fri, 16 Aug 2024 16:15:26 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>24w33a更新</title><link>https://73410.github.io/news.github.io/post/24w33a-geng-xin.html</link><description>## 实验性特性&#13;
 下列更改仅在其实验性开关打开时生效，可以通过激活相应的数据包或者在创建世界时在实验性界面打开。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/24w33a-geng-xin.html</guid><pubDate>Fri, 16 Aug 2024 08:45:39 +0000</pubDate></item><item><title>《PCC服务器治安管理处罚条例》</title><link>https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</link><description>违规玩家将收到应有的惩罚！！！&#13;
 # 一、前言:&#13;
 &gt; [!NOTE]&#13;
@@ -33,7 +33,8 @@
     - 仅仅有两次试错机会&#13;
 3. C级&#13;
     - ban（1日-1周）&#13;
-    - 仅仅有两次试错机会。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</guid><pubDate>Tue, 13 Aug 2024 12:41:51 +0000</pubDate></item><item><title>8月6日更新公告</title><link>https://73410.github.io/news.github.io/post/8-yue-6-ri-geng-xin-gong-gao.html</link><description># 一、更新了商店插件&#13;
+    - 仅仅有两次试错机会。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</guid><pubDate>Tue, 13 Aug 2024 12:41:51 +0000</pubDate></item><item><title>8月6日更新公告</title><link>https://73410.github.io/news.github.io/post/8-yue-6-ri-geng-xin-gong-gao.html</link><description>进行了一系列更新&#13;
+# 一、更新了商店插件&#13;
 现在商店会**随机**不定期刷新一些物品来供购买，每个物品**总存货货量**为64&#13;
 # 二、更新了数据包&#13;
 现在可以合成**附魔金苹果**了&#13;
