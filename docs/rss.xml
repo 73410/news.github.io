@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sun, 01 Sep 2024 07:50:03 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>新的登录系统启用</title><link>https://73410.github.io/news.github.io/post/xin-de-deng-lu-xi-tong-qi-yong.html</link><description>服务器启用新的验证系统，必须要**绑定邮箱**才能进去游戏！！！&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sat, 14 Sep 2024 07:39:39 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>9月14日更新公告</title><link>https://73410.github.io/news.github.io/post/9-yue-14-ri-geng-xin-gong-gao.html</link><description># 一、主要更新&#13;
+1. 将服务器版本更新至`1.21.1`&#13;
+2. 更新插件以适应更新&#13;
+3. 对登录系统进行了修改，现在注册新账户也需要绑定邮箱了&#13;
+4. 提示&#13;
+&gt;[!TIP]&#13;
+&gt; 文末有彩蛋&#13;
+# 二、对于插件的更新&#13;
+## 1.Head Database&#13;
+- 修复了自定义类别中使用的 UUID 头的问题（它们现在应转换为 base64 头）&#13;
+- 修复了 /phead 无法正常工作的问题，原因与 UUID 头相同。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/9-yue-14-ri-geng-xin-gong-gao.html</guid><pubDate>Sat, 14 Sep 2024 07:39:15 +0000</pubDate></item><item><title>新的登录系统启用</title><link>https://73410.github.io/news.github.io/post/xin-de-deng-lu-xi-tong-qi-yong.html</link><description>服务器启用新的验证系统，必须要**绑定邮箱**才能进去游戏！！！&#13;
 （如果没有邮箱，可以[加入QQ群](https://qm.qq.com/cgi-bin/qm/qr?k=IN_EHEI0R8G_cji3laxoS_g9YxHcx1NF&amp;jump_from=webapi&amp;authKey=VH21pBOzskhbjIx9gc95OoCI02FIVn42saJddZebJaIkO6cQ+eVVE005lr7yos2y)联系以下人员**获取uuid**）&#13;
 &gt; [!WARNING]&#13;
 &gt; 请妥善保管获取到的uuid，否则后果自负&#13;
