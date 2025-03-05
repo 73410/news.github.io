@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://mcpcc.fun/static/picture/logo.webp"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="## BlueMap 插件
+
+BlueMap 提供 3D Web 地图展示服务器世界，通常无需手动指令即可自动渲染更新地图，但也提供了一系列管理指令：
+
+- **`/bluemap`** – **显示 BlueMap 渲染状态**。">
+<meta property="og:title" content="新三周目指令大全（上）">
+<meta property="og:description" content="## BlueMap 插件
+
+BlueMap 提供 3D Web 地图展示服务器世界，通常无需手动指令即可自动渲染更新地图，但也提供了一系列管理指令：
+
+- **`/bluemap`** – **显示 BlueMap 渲染状态**。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://73410.github.io/news.github.io/post/xin-san-zhou-mu-zhi-ling-da-quan-%EF%BC%88-shang-%EF%BC%89.html">
+<meta property="og:image" content="https://mcpcc.fun/static/picture/logo.webp">
+<title>新三周目指令大全（上）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">新三周目指令大全（上）</h1>
+<div class="title-right">
+    <a href="https://73410.github.io/news.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/73410/news.github.io/issues/32" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2>BlueMap 插件</h2>
+<p>BlueMap 提供 3D Web 地图展示服务器世界，通常无需手动指令即可自动渲染更新地图，但也提供了一系列管理指令：</p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/bluemap</code></strong> – <strong>显示 BlueMap 渲染状态</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 执行<code class="notranslate">/bluemap</code> 可返回类似“<strong>BlueMap</strong> 当前渲染队列任务: 2 (进行中)”的状态信息。</li>
+<li><strong>返回信息</strong>: BlueMap 当前的渲染状态，包括正在渲染的任务数等。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.status</code>（默认仅OP/管理员可用）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap version</code></strong> – <strong>查看 BlueMap 版本信息</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap version</code> 将显示 BlueMap 插件版本以及系统信息等。</li>
+<li><strong>返回信息</strong>: BlueMap 当前版本号及相关系统信息。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.version</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap help</code></strong> – <strong>获取 BlueMap 帮助链接</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 输入<code class="notranslate">/bluemap help</code> 会返回插件帮助文档和支持链接（Wiki、Discord等）。</li>
+<li><strong>返回信息</strong>: BlueMap 官方文档地址和支持渠道信息。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.help</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap reload [light]</code></strong> – <strong>重载 BlueMap 配置</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 可选的 “<code class="notranslate">light</code>” 参数。如加上<code class="notranslate">light</code>则执行“轻度重载”（不重新加载资源包/模组数据，速度更快）。不加参数则完全重载所有资源、配置和Web服务器。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap reload light</code> 将快速重载除资源外的配置；<code class="notranslate">/bluemap reload</code> 则完全重载插件配置。</li>
+<li><strong>返回信息</strong>: 重载成功或失败的信息。例如“BlueMap 配置已重载”。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.reload</code>（完全重载），<code class="notranslate">bluemap.reload.light</code>（轻度重载）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap maps</code></strong> – <strong>列出所有已加载地图</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap maps</code> 列出当前 BlueMap 加载的所有世界地图名称和ID。</li>
+<li><strong>返回信息</strong>: 地图列表（每张地图的ID和名称）。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.maps</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap storages</code></strong> – <strong>列出所有存储容器</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap storages</code> 显示BlueMap配置的所有地图存储（如本地文件存储、SQL存储等）。</li>
+<li><strong>返回信息</strong>: 存储列表及各存储中地图数量等信息。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.storages</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap storages &lt;存储名&gt;</code></strong> – <strong>查看指定存储中的地图</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;存储名&gt;</code> – BlueMap 的存储容器名称。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap storages database</code> 显示名为“database”的存储中包含的所有地图列表。</li>
+<li><strong>返回信息</strong>: 指定存储下的地图名称列表。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.storages</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap storages &lt;存储名&gt; delete &lt;地图ID&gt;</code></strong> – <strong>删除指定存储中的某张地图数据</strong>（危险操作）。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;存储名&gt;</code> 为存储容器；<code class="notranslate">&lt;地图ID&gt;</code> 为要删除的地图标识。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap storages database delete world</code> 删除数据库存储中ID为“world”的地图数据。</li>
+<li><strong>返回信息</strong>: 成功则提示地图数据已删除。如果地图正在加载则会提示需改用<code class="notranslate">/bluemap purge</code>命令。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.storages.delete</code>（删除地图数据需要管理权限）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap stop</code></strong> – <strong>暂停所有地图渲染</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 执行<code class="notranslate">/bluemap stop</code> 暂停BlueMap当前的所有地图渲染任务。即使重启服务器暂停状态仍保持。</li>
+<li><strong>返回信息</strong>: “渲染已暂停”等确认消息。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.stop</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap start</code></strong> – <strong>恢复渲染</strong>（继续被暂停的渲染）。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 执行<code class="notranslate">/bluemap start</code> 恢复此前通过<code class="notranslate">/bluemap stop</code>暂停的渲染进程。</li>
+<li><strong>返回信息</strong>: “渲染已恢复”确认消息。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.start</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap freeze &lt;地图ID&gt;</code></strong> – <strong>冻结指定地图的更新</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;地图ID&gt;</code> – 要冻结更新的地图标识。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap freeze world_nether</code> 将暂停 Nether 地图的自动更新（此状态在服务器重启后仍保持）。</li>
+<li><strong>返回信息</strong>: 确认指定地图已冻结，不再更新。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.freeze</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap unfreeze &lt;地图ID&gt;</code></strong> – <strong>解除冻结</strong>，恢复指定地图的更新。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;地图ID&gt;</code> – 要恢复更新的地图标识。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap unfreeze world_nether</code> 恢复 Nether 地图的正常更新渲染。</li>
+<li><strong>返回信息</strong>: 指定地图已解除冻结并继续更新的提示。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.unfreeze</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap purge &lt;地图ID&gt;</code></strong> – <strong>清除并重新渲染地图</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;地图ID&gt;</code> – 要清除的地图标识。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap purge world</code> 将删除ID为“world”的地图所有已渲染数据。之后BlueMap会在地图未冻结的情况下重新开始渲染该地图。</li>
+<li><strong>返回信息</strong>: 确认地图数据已清除的消息。清除后若地图未冻结将重新渲染。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.purge</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap update [地图ID] [x z] [半径]</code></strong> – <strong>手动触发更新渲染</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 可选参数：<code class="notranslate">[地图ID]</code> 指定地图，<code class="notranslate">[x z]</code>坐标指定中心位置(默认为执行者位置)，<code class="notranslate">[半径]</code>方块半径范围(默认为全图)。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap update world 100 64 100 50</code> 将在 world 地图中以坐标(100,64,100)为中心、50方块半径内强制更新渲染区域。若不提供参数则更新整个地图已变动的区块。</li>
+<li><strong>返回信息</strong>: 将选区放入渲染队列的提示。BlueMap 通常会自动检测世界变化并更新，本命令主要用于特殊情况手动更新。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.update</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap fix-edges [地图ID] [x z] [半径]</code></strong> – <strong>重新渲染地图边缘</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 同<code class="notranslate">/bluemap update</code>，可选指定地图、中心坐标和半径。不提供则默认当前地图全图边缘。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap fix-edges world</code> 强制重新渲染 world 地图所有边界区域的方块，即使这些区块没有更改。</li>
+<li><strong>返回信息</strong>: 已添加边缘重渲染任务的提示。该命令用于在更改地图边界限制后修复视觉问题。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.update</code>（同更新命令）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap force-update [地图ID] [x z] [半径]</code></strong> – <strong>强制渲染整个区域</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 同<code class="notranslate">/bluemap update</code>，可选指定范围。不提供则默认为整个地图。与普通<code class="notranslate">update</code>不同，此命令会**无视“无更改”**强制渲染所有区块。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap force-update world</code> 将无视变化状态，强制重新渲染 world 地图的全部区块。</li>
+<li><strong>返回信息</strong>: 已添加强制更新任务的提示。通常BlueMap能可靠检测变化，本命令一般仅用于测试或特殊需要。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.update</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap tasks</code></strong> – <strong>查看渲染任务队列</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap tasks</code> 列出当前等待或进行中的渲染任务列表及其引用ID。</li>
+<li><strong>返回信息</strong>: 当前渲染线程正在处理的任务队列详情。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.tasks</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap tasks cancel &lt;任务ID&gt;</code></strong> – <strong>取消指定渲染任务</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;任务ID&gt;</code> – 要取消的任务引用ID（可通过<code class="notranslate">/bluemap tasks</code>查看）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap tasks cancel 5</code> 取消队列中ID为5的渲染任务。</li>
+<li><strong>返回信息</strong>: 任务已取消的确认。如果任务不存在或已完成会有相应提示。建议优先使用地图冻结而非逐任务取消。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.tasks.cancel</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap troubleshoot [地图ID] [x z]</code></strong> – <strong>疑难排查</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 可选 <code class="notranslate">地图ID</code> 指定地图；可选 <code class="notranslate">x z</code> 指定坐标（默认为执行者所在位置）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap troubleshoot world 150 60</code> 将检测 world 地图中坐标(150,60)附近潜在的问题并给出建议。若不提供参数则检查脚下位置所属地图。</li>
+<li><strong>返回信息</strong>: BlueMap 检测到的潜在问题列表以及修复建议。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.troubleshoot</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap debug world [地图ID] [x y z]</code></strong> – <strong>调试：世界信息</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 可选 <code class="notranslate">地图ID</code>，可选坐标<code class="notranslate">x y z</code>（默认为当前玩家位置）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap debug world</code> 在当前地图当前坐标输出调试信息，如所属区块、地形高度等。如果指定坐标则输出该处的世界数据详情。</li>
+<li><strong>返回信息</strong>: 有关该世界在指定坐标处的一些调试数据（例如区块信息、生物群系等）。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.debug.world</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap debug map [地图ID] [x z]</code></strong> – <strong>调试：地图瓦片信息</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 可选 <code class="notranslate">地图ID</code>，可选平面坐标<code class="notranslate">x z</code>（默认当前位置对应的地图瓦片）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap debug map world_nether 10 5</code> 输出 Nether 地图瓦片(10,5)的调试信息，如瓦片文件路径、渲染状态等。</li>
+<li><strong>返回信息</strong>: 该地图瓦片的渲染调试数据。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.debug.map</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bluemap debug dump</code></strong> – <strong>生成调试转储文件</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bluemap debug dump</code> 将在服务器<code class="notranslate">./bluemap/dump.json</code>路径生成一个包含大量 BlueMap 当前状态信息的JSON文件。</li>
+<li><strong>返回信息</strong>: 通常在控制台确认已创建 dump 文件。该文件可用于开发者分析 BlueMap 状态。</li>
+<li><strong>权限</strong>: <code class="notranslate">bluemap.debug.dump</code>。</li>
+</ul>
+</li>
+</ul>
+<p><em>提示</em>: BlueMap的大部分渲染工作会自动进行，通常不需要频繁使用以上命令。请谨慎使用删除、清除类命令，并确保有相应的备份。</p>
+<h2>CatSeedLogin 插件</h2>
+<p>CatSeedLogin（猫种子登录）是一个玩家注册/登录管理插件，提供了玩家注册、登录、更改密码以及管理员管理账户等功能。插件指令分为玩家指令和管理员指令：</p>
+<p><strong>玩家注册/登录指令:</strong></p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/login &lt;密码&gt;</code></strong> 或 <strong><code class="notranslate">/l &lt;密码&gt;</code></strong> – <strong>登录账户</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;密码&gt;</code> 为玩家账户密码。</li>
+<li><strong>示例</strong>: 玩家进入服务器后输入<code class="notranslate">/login 123456</code> 使用密码“123456”登录。</li>
+<li><strong>返回信息</strong>: 成功则提示“登录成功”，失败则返回“密码错误，请重试”等错误信息。</li>
+<li><strong>权限</strong>: 所有玩家（未登录时可用）。插件默认仅允许登录指令被未登录玩家执行。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/register &lt;密码&gt; &lt;重复密码&gt;</code></strong> 或 <strong><code class="notranslate">/reg &lt;密码&gt; &lt;重复密码&gt;</code></strong> – <strong>注册账户密码</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;密码&gt;</code> 设置新账户密码；<code class="notranslate">&lt;重复密码&gt;</code> 再次输入相同密码确认。</li>
+<li><strong>示例</strong>: 新玩家首次加入时输入<code class="notranslate">/register abc123 abc123</code> 注册密码为“abc123”的账户。</li>
+<li><strong>返回信息</strong>: 注册成功将提示“注册成功，请登录”，如果两次密码输入不一致或密码不符合要求则会给出相应提示（如“密码不匹配”）。</li>
+<li><strong>权限</strong>: 所有新玩家可用（未注册状态下）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/changepassword &lt;旧密码&gt; &lt;新密码&gt; &lt;重复新密码&gt;</code></strong> 或 <strong><code class="notranslate">/changepw &lt;旧密码&gt; &lt;新密码&gt; &lt;重复新密码&gt;</code></strong> – <strong>修改密码</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;旧密码&gt;</code> 当前账户密码；<code class="notranslate">&lt;新密码&gt;</code> 新设置的密码；<code class="notranslate">&lt;重复新密码&gt;</code> 再次输入新密码确认。</li>
+<li><strong>示例</strong>: <code class="notranslate">/changepw oldPass123 newPass456 newPass456</code> 将账户密码从<code class="notranslate">oldPass123</code>修改为<code class="notranslate">newPass456</code>。</li>
+<li><strong>返回信息</strong>: 成功则提示密码修改成功，之后需要使用新密码登录；失败则可能是旧密码不正确或新密码两次输入不一致。</li>
+<li><strong>权限</strong>: 登录状态下的玩家。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bindemail set &lt;邮箱&gt;</code></strong> 或 <strong><code class="notranslate">/bdmail set &lt;邮箱&gt;</code></strong> – <strong>绑定邮箱</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;邮箱&gt;</code> 要绑定的电子邮箱地址。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bindemail set player@example.com</code> 将您的游戏账户绑定到邮箱<code class="notranslate">player@example.com</code>。随后插件会发送验证码邮件用于验证。</li>
+<li><strong>返回信息</strong>: 提示绑定验证码已发送至该邮箱。玩家需使用<code class="notranslate">/bindemail verify</code>命令完成验证。</li>
+<li><strong>权限</strong>: 登录状态玩家可用。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bindemail verify &lt;验证码&gt;</code></strong> 或 <strong><code class="notranslate">/bdmail verify &lt;验证码&gt;</code></strong> – <strong>验证邮箱</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;验证码&gt;</code> 收到的邮箱验证码。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bindemail verify 123456</code> 使用邮箱收到的六位验证码<code class="notranslate">123456</code>完成邮箱绑定。</li>
+<li><strong>返回信息</strong>: 验证成功会提示邮箱绑定完成；若验证码错误或过期则提示验证失败。</li>
+<li><strong>权限</strong>: 已执行过<code class="notranslate">/bindemail set</code>且收到验证码的玩家。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/resetpassword forget</code></strong> 或 <strong><code class="notranslate">/repw forget</code></strong> – <strong>申请重置密码</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 固定关键字 <code class="notranslate">forget</code>。</li>
+<li><strong>示例</strong>: <code class="notranslate">/resetpassword forget</code> 当玩家忘记密码时使用，插件将向已绑定的邮箱发送重置密码的验证码。</li>
+<li><strong>返回信息</strong>: 如果玩家已绑定邮箱，则提示重置验证码已发送；若未绑定邮箱则会提示无法执行此操作。</li>
+<li><strong>权限</strong>: 未登录且已绑定邮箱的玩家。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bindemail re &lt;验证码&gt; &lt;新密码&gt;</code></strong> 或 <strong><code class="notranslate">/bdmail re &lt;验证码&gt; &lt;新密码&gt;</code></strong> – <strong>使用邮箱验证码重置密码</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;验证码&gt;</code> 邮箱收到的重置验证码；<code class="notranslate">&lt;新密码&gt;</code> 要设置的新密码。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bdmail re 654321 newPassword</code> 使用邮箱验证码<code class="notranslate">654321</code>将账户密码重置为<code class="notranslate">newPassword</code>。</li>
+<li><strong>返回信息</strong>: 成功则提示密码已重置，接下来可使用新密码登录；若验证码错误无效则提示操作失败。</li>
+<li><strong>权限</strong>: 玩家在收到重置验证码后可用。</li>
+</ul>
+</li>
+</ul>
+<p><strong>管理员管理指令（需 OP 或授权权限 <code class="notranslate">catseedlogin.command.catseedlogin</code> 才可使用）:</strong></p>
+<p>CatSeedLogin 所有管理类命令均以主命令<code class="notranslate">/catseedlogin</code>开头，帮助服务器管理员进行登录系统的规则设置与账户管理：</p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/catseedlogin commandWhiteListAdd &lt;指令&gt;</code></strong> – <strong>添加登录前允许执行的指令</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;指令&gt;</code> 要加入白名单的指令（支持正则表达式）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin commandWhiteListAdd /help</code> 将允许未登录玩家使用<code class="notranslate">/help</code>命令。支持使用正则如<code class="notranslate">/(?i)tpa(\z| .*)</code>添加所有形式的/tpa请求命令。</li>
+<li><strong>返回信息</strong>: 确认指定指令已加入白名单。未登录玩家在登录前可执行被白名单允许的部分命令。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin commandWhiteListDel &lt;指令&gt;</code></strong> – <strong>删除登录前指令白名单</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;指令&gt;</code> 要从白名单移除的指令（需与添加时使用的匹配模式相同）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin commandWhiteListDel /help</code> 将取消未登录状态下<code class="notranslate">/help</code>指令的使用权。</li>
+<li><strong>返回信息</strong>: 指定指令已从白名单移除的提示。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin commandWhiteListInfo</code></strong> – <strong>查看当前登录前白名单指令</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 执行<code class="notranslate">/catseedlogin commandWhiteListInfo</code> 可列出所有允许未登录玩家使用的指令列表及匹配规则。</li>
+<li><strong>返回信息</strong>: 白名单指令的完整列表信息。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setIpRegCountLimit &lt;数量&gt;</code></strong> – <strong>设置同一IP最大注册账户数</strong>（默认2）。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;数量&gt;</code> 限制的账户数上限。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin setIpRegCountLimit 1</code> 限制同一IP地址最多只能注册1个账户。</li>
+<li><strong>返回信息</strong>: 新的IP注册数量限制已生效的提示。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setIpCountLimit &lt;数量&gt;</code></strong> – <strong>设置同一IP允许同时在线的账户数</strong>（默认2）。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;数量&gt;</code> 同IP最大同时在线数。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin setIpCountLimit 3</code> 允许同IP最多3个账号同时在线。</li>
+<li><strong>返回信息</strong>: 配置已更新的提示。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setIdLength &lt;最短&gt; &lt;最长&gt;</code></strong> – <strong>设置游戏名长度限制</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;最短&gt;</code> 最短长度；<code class="notranslate">&lt;最长&gt;</code> 最长长度。默认最短2，最长15。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin setIdLength 3 12</code> 将玩家用户名限制为3～12个字符之间。</li>
+<li><strong>返回信息</strong>: 已更新ID长度限制设置。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setReenterInterval &lt;间隔&gt;</code></strong> – <strong>设置退出后重进的最小间隔时间</strong>（单位: ticks）。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;间隔&gt;</code> 以tick为单位的间隔（20tick=1秒）。默认60tick（3秒）。设置小于20则基本等于不限制。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin setReenterInterval 120</code> 设置玩家下线后必须等待至少6秒(120 ticks)才能重新进入服务器。</li>
+<li><strong>返回信息</strong>: 已更新该间隔设置的确认。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setSpawnLocation</code></strong> – <strong>设置登录地点</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无（执行该命令的玩家当前站立位置将作为新的登录出生点）。</li>
+<li><strong>示例</strong>: 管理员站在希望的新玩家出生的坐标处执行<code class="notranslate">/catseedlogin setSpawnLocation</code>，插件将该位置记为登录时的传送点。</li>
+<li><strong>返回信息</strong>: 提示已成功设置新的登录地点坐标。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setAutoKick &lt;秒数&gt;</code></strong> – <strong>设置自动踢出未登录玩家的等待时间</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;秒数&gt;</code> 未登录超时时间（默认120秒）。设为小于1则关闭此功能。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin setAutoKick 60</code> 则玩家进入游戏后60秒内不登录将被自动踢出。</li>
+<li><strong>返回信息</strong>: 自动踢出时间已更改的确认。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin limitChineseID</code></strong> – <strong>切换限制中文用户名开关</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无（执行即切换开启/关闭）。默认开启（限制中文ID）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin limitChineseID</code> 如果目前限制开启则执行后关闭，反之开启。</li>
+<li><strong>返回信息</strong>: 提示已切换“限制中文游戏名”的状态（开或关）。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin beforeLoginNoDamage</code></strong> – <strong>切换未登录前无伤害保护</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。默认开启（未登录前不受伤害）。</li>
+<li><strong>示例</strong>: 执行<code class="notranslate">/catseedlogin beforeLoginNoDamage</code> 切换设定（若原本开启则关闭，使未登录玩家可能受到伤害）。</li>
+<li><strong>返回信息</strong>: 提示已切换“登录前无伤害”设定状态。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin afterLoginBack</code></strong> – <strong>切换登录后返回下线位置</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。默认开启（登录成功后玩家传送回其下线时的位置）。关闭则登录后仍留在出生点。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin afterLoginBack</code> 切换此设定。</li>
+<li><strong>返回信息</strong>: 提示“登录后返回原位置”功能已开启或关闭。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin canTpSpawnLocation</code></strong> – <strong>切换强制登录地点传送</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。默认开启（未登录前强制处于设定的Spawn登录地点）。关闭后玩家下线重进不会被强制传送至Spawn（不建议关闭）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin canTpSpawnLocation</code> 切换此设定开关。</li>
+<li><strong>返回信息</strong>: 更新“登录前强制传送到登录点”设定状态的提示。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin deathStateQuitRecordLocation</code></strong> – <strong>切换死亡状态退出记录位置</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。默认开启（玩家死亡界面下线将记录死亡位置并在登录后回到该处）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin deathStateQuitRecordLocation</code> 切换此功能的开关。</li>
+<li><strong>返回信息</strong>: 确认该功能已开启或关闭。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin delPlayer &lt;玩家名&gt;</code></strong> – <strong>强制删除玩家账户</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;玩家名&gt;</code> 要删除账户的玩家用户名。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin delPlayer Steve</code> 将从登录插件数据中删除玩家“Steve”的账户记录（包括密码等），该玩家需重新注册。</li>
+<li><strong>返回信息</strong>: 成功删除则提示账户已删除。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin setPwd &lt;玩家名&gt; &lt;新密码&gt;</code></strong> – <strong>强制重设玩家密码</strong>。</p>
+<ul>
+<li><strong>参数</strong>: <code class="notranslate">&lt;玩家名&gt;</code> 目标玩家；<code class="notranslate">&lt;新密码&gt;</code> 为其设置的新密码。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin setPwd Alex newpass123</code> 将玩家Alex的密码重置为“newpass123”。</li>
+<li><strong>返回信息</strong>: 确认密码已更改，该玩家下次需使用新密码登录。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/catseedlogin reload</code></strong> – <strong>重载插件配置文件</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。执行后插件将重新加载settings.yml等配置以及语言文件等。</li>
+<li><strong>示例</strong>: <code class="notranslate">/catseedlogin reload</code> 应用对配置文件所做的修改（如修改了欢迎消息或超时时间等配置）。</li>
+<li><strong>返回信息</strong>: 插件配置已重新加载成功的提示。如果文件有错误则会在控制台报告。</li>
+<li><strong>权限</strong>: 管理员权限。</li>
+</ul>
+</li>
+</ul>
+<p><em>权限说明</em>: <strong>catseedlogin.command.catseedlogin</strong> 是上述所有<code class="notranslate">/catseedlogin ...</code>管理命令的总权限节点，服务器管理员通常赋予自己或权限组该节点以使用所有管理指令。</p>
+<h2>CMILib 插件</h2>
+<p>CMILib（<strong>CMI</strong> Library）是由 Zrips 提供的公共插件库，本身并非面向玩家的功能插件，而是为其它插件（如 CMI、Jobs、Residence 等）提供统一的命令框架、消息格式、API等支持。因此 <strong>CMILib 插件本身提供的指令非常有限</strong>。</p>
+<ul>
+<li><strong><code class="notranslate">/cmil reload</code></strong> – <strong>重载 CMILib 配置</strong>。
+<ul>
+<li><strong>作用</strong>: 重新加载CMILib的配置文件和本地化语言文件。当您修改了CMILib的配置（如消息格式、自动更新设置等）后，可使用此命令使更改生效。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/cmil reload</code> 重载CMILib配置，使新语言翻译即时生效。</li>
+<li><strong>返回信息</strong>: 控制台或执行者会收到 “CMILib 配置已重载” 等提示。</li>
+<li><strong>权限</strong>: 一般仅管理员(OP)使用。执行此命令需要有管理权限。</li>
+</ul>
+</li>
+</ul>
+<p><em>说明</em>: 除了上面的<code class="notranslate">/cmil reload</code>之外，CMILib几乎没有其他需要手动执行的指令。它主要在后台运行，供其他插件调用。如果使用了Zrips系列的插件，确保CMILib保持最新版本即可。</p>
+<h2>CoreProtect 插件</h2>
+<p>CoreProtect 是功能强大的<strong>方块/行为日志记录和回滚插件</strong>，允许管理员查询方块破坏、放置、物品交易等历史记录，并支持<strong>回滚</strong>或<strong>还原</strong>破坏行为。<strong>CoreProtect 主命令前缀为 <code class="notranslate">/co</code></strong>。主要指令包括：</p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/co help</code></strong> – <strong>显示 CoreProtect 指令帮助列表</strong>。</p>
+<ul>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 玩家在游戏中输入<code class="notranslate">/co help</code> 将在聊天中分页显示CoreProtect可用命令及简要说明。</li>
+<li><strong>返回信息</strong>: 命令帮助列表（默认为第1页，可通过附加页码浏览后续指令列表）。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect</code> 系列权限默认给予OP。普通用户一般无权使用除非特别赋予。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co inspect</code></strong> 或 <strong><code class="notranslate">/co i</code></strong> – <strong>切换检查器模式</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 开启“检查器”后，玩家左键点击方块或实体，可查看该位置最近的破坏/放置历史记录，再次执行命令则关闭检查模式。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 管理员执行<code class="notranslate">/co i</code> 后，敲击一个被破坏的箱子，会在聊天中显示谁在何时破坏/打开了该箱子等信息。再次<code class="notranslate">/co i</code>可退出检查模式。</li>
+<li><strong>返回信息</strong>: <strong>开启时</strong>提示“Inspector enabled”（检查器已启用），<strong>关闭时</strong>提示“Inspector disabled”。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.inspect</code> 或OP。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co lookup &lt;参数&gt;</code></strong> 或 <strong><code class="notranslate">/co l &lt;参数&gt;</code></strong> – <strong>查询日志记录</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 根据提供的过滤参数，查询匹配的方块/实体交互日志。<strong>几乎所有参数都是可选的</strong>，不指定则查询全部日志。支持分页显示结果。</li>
+<li><strong>参数</strong>: 常用过滤参数如下：
+<ul>
+<li><code class="notranslate">u:&lt;玩家名&gt;</code> 指定执行操作的玩家（支持多个，以逗号分隔，如<code class="notranslate">u:Notch,Steve</code>）。也可用特殊值，如<code class="notranslate">u:#tnt</code>表示由TNT爆炸导致的变化。</li>
+<li><code class="notranslate">t:&lt;时间&gt;</code> 时间范围，例如<code class="notranslate">t:5h</code>表示过去5小时内；也可组合<code class="notranslate">t:2d3h</code>或范围<code class="notranslate">t:1h-2h</code>。默认为无限制（所有时间）。</li>
+<li><code class="notranslate">r:&lt;半径&gt;</code> 查询半径（以执行者当前位置为中心的方块范围）；或<code class="notranslate">r:#world</code>指定整个世界；<code class="notranslate">r:#global</code>全服务器；也可<code class="notranslate">r:#we</code>使用WorldEdit选区。默认不限定范围。</li>
+<li><code class="notranslate">a:&lt;动作&gt;</code> 限定动作类型，如<code class="notranslate">a:block</code>（方块放置/破坏），<code class="notranslate">a:+block</code>仅放置，<code class="notranslate">a:-block</code>仅破坏。支持的动作详见下文。</li>
+<li><code class="notranslate">i:&lt;包含&gt;</code> 限定涉及的方块/物品/实体，如<code class="notranslate">i:chest</code>只查箱子；支持多个以逗号隔开。</li>
+<li><code class="notranslate">e:&lt;排除&gt;</code> 排除特定方块/物品/实体，如<code class="notranslate">e:stone</code>排除石头相关记录。</li>
+<li><code class="notranslate">#&lt;标签&gt;</code> 使用特殊“哈希标签”执行附加操作（如<code class="notranslate">#preview</code>预览回滚，<code class="notranslate">#count</code>仅计数结果行数等，见后文）。</li>
+</ul>
+</li>
+<li><strong>示例</strong>:
+<ul>
+<li><code class="notranslate">/co lookup u:Steve t:1d r:20 i:diamond_ore</code> – 查询<strong>20格半径内</strong>过去1天中玩家Steve挖掘钻石矿石的记录。</li>
+<li><code class="notranslate">/co l t:12h a:chat u:Alex</code> – 查询Alex过去12小时内发送的聊天消息记录。</li>
+</ul>
+</li>
+<li><strong>返回信息</strong>: 符合查询条件的日志条目列表，默认一次显示10行，包括<strong>时间戳</strong>、<strong>坐标</strong>、<strong>玩家</strong>和<strong>动作详情</strong>等。如果结果超过一页，会提示使用<code class="notranslate">/co lookup &lt;页码&gt;</code>翻页。例如 “Page 1/3”。
+<ul>
+<li>例：<code class="notranslate">#1 [15:30:22] Steve removed STONE at 123,64,456</code> 表示Steve于15:30:22破坏了石头，坐标(123,64,456)。</li>
+<li>可使用<code class="notranslate">/co lookup &lt;页码&gt;</code>翻页，例如<code class="notranslate">/co l 2</code>显示第二页；或<code class="notranslate">/co l 1:15</code>每页15行显示第一页。</li>
+</ul>
+</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.lookup</code>（通常OP默认拥有）。</li>
+</ul>
+<p><strong>动作参数说明</strong>: <code class="notranslate">a:</code>参数可筛选具体的行为类型，例如：</p>
+<ul>
+<li><code class="notranslate">a:block</code> – <strong>方块</strong>放置/破坏（所有方块交互）。</li>
+<li><code class="notranslate">a:+block</code> – <strong>方块放置</strong>操作。</li>
+<li><code class="notranslate">a:-block</code> – <strong>方块破坏</strong>操作。</li>
+<li><code class="notranslate">a:container</code> – <strong>容器交互</strong>（物品存入/取出箱子等）。</li>
+<li><code class="notranslate">a:+container</code> – 向容器<strong>放入</strong>物品。</li>
+<li><code class="notranslate">a:-container</code> – <strong>取出</strong>容器物品。</li>
+<li><code class="notranslate">a:inventory</code> – <strong>玩家物品栏</strong>增减（拾取或丢弃）。</li>
+<li><code class="notranslate">a:item</code> – <strong>物品掉落/拾起</strong>等。</li>
+<li><code class="notranslate">a:kill</code> – <strong>生物被杀死</strong>事件。</li>
+<li><code class="notranslate">a:chat</code> – <strong>聊天</strong>消息。</li>
+<li><code class="notranslate">a:command</code> – <strong>指令</strong>执行记录。</li>
+<li>等等。通过<code class="notranslate">/co help</code>可查看全部动作筛选项。</li>
+</ul>
+<p><strong>哈希标签</strong>: 在<code class="notranslate">lookup</code>参数末尾加上一些特殊标签可更改查询模式：</p>
+<ul>
+<li><code class="notranslate">#preview</code> – 进入<strong>预览模式</strong>，将查询结果作为回滚预览应用在世界中（不会真正改变，只对自己可见，供确认效果）。</li>
+<li><code class="notranslate">#count</code> – <strong>仅计数</strong>符合条件的条目数，不列出详细清单。</li>
+<li><code class="notranslate">#verbose</code> – <strong>详细模式</strong>，在回滚/还原过程中显示更多细节信息。</li>
+<li><code class="notranslate">#silent</code> – <strong>静默模式</strong>，回滚/还原过程仅显示最少的信息。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co rollback &lt;参数&gt;</code></strong> 或 <strong><code class="notranslate">/co rb &lt;参数&gt;</code></strong> – <strong>回滚</strong>指定时间范围内的更改。</p>
+<ul>
+<li><strong>作用</strong>: 将选定范围内在指定时间段发生的玩家操作<strong>逆向撤销</strong>（如将被破坏的方块恢复、移除放置的方块等），用于恢复破坏。</li>
+<li><strong>参数</strong>: 参数格式与<code class="notranslate">/co lookup</code>基本相同（<code class="notranslate">u:</code>, <code class="notranslate">t:</code>, <code class="notranslate">r:</code>, <code class="notranslate">a:</code>, <code class="notranslate">i:</code>, <code class="notranslate">e:</code>等），用于限定要回滚的内容范围。**通常至少需要指定时间(<code class="notranslate">t:</code>)**以免影响过大范围。</li>
+<li><strong>示例</strong>:
+<ul>
+<li><code class="notranslate">/co rollback u:Griefer t:2h r:100 #preview</code> – <strong>预览</strong>回滚Griefer玩家过去2小时内在半径100范围造成的所有破坏。</li>
+<li><code class="notranslate">/co rb u:Steve t:1d a:-block</code> – 回滚Steve在过去1天内<strong>破坏的所有方块</strong>（即恢复这些方块）。</li>
+<li><code class="notranslate">/co rb t:10m r:global</code> – 回滚全服过去10分钟内的所有玩家行为（慎用，大范围回滚）。</li>
+</ul>
+</li>
+<li><strong>返回信息</strong>: 若未使用<code class="notranslate">#preview</code>，执行后将实际更改世界并提示如“Rollback complete (42 blocks modified)”表示完成回滚以及改变的方块数。如果有<code class="notranslate">#preview</code>标签，则进入预览模式，只对执行者显示回滚效果，并提示使用<code class="notranslate">/co confirm</code>确认或<code class="notranslate">/co cancel</code>取消预览。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.rollback</code>（只有具有该权限的管理员可执行回滚操作）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co restore &lt;参数&gt;</code></strong> 或 <strong><code class="notranslate">/co rs &lt;参数&gt;</code></strong> – <strong>还原</strong>指定时间范围的更改。</p>
+<ul>
+<li><strong>作用</strong>: 与回滚相反，“还原”用于<strong>撤销已经执行过的回滚</strong>或者重做玩家的行为。例如在误回滚后使用restore按原记录重放玩家操作，或用于恢复某玩家被撤销的动作。参数格式与<code class="notranslate">rollback</code>相同。</li>
+<li><strong>参数</strong>: 同<code class="notranslate">/co rollback</code>使用相同的筛选参数。请确保筛选条件与之前回滚操作一致，以正确还原。</li>
+<li><strong>示例</strong>:
+<ul>
+<li><code class="notranslate">/co restore u:Griefer t:2h r:100</code> – 将前例中Griefer过去2小时内的破坏<strong>重新破坏回去</strong>（即撤销前面的回滚，相当于再破坏一次那些方块）。</li>
+<li><code class="notranslate">/co rs u:Steve t:1d a:-block</code> – 重新移除Steve过去1天内破坏的方块（如果之前曾被回滚恢复，现在再移除一次，相当于还原他破坏的结果）。</li>
+</ul>
+</li>
+<li><strong>返回信息</strong>: 执行后，提示类似“Restore complete (42 blocks modified)”，表示已按日志重做指定操作，数字为改变的方块数。如果使用<code class="notranslate">#preview</code>则会有预览提示。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.restore</code>（默认OP）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co purge &lt;参数&gt;</code></strong> – <strong>清理旧数据</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 删除CoreProtect数据库中较旧的日志记录，以节省存储空间。<strong>注意</strong>：一旦Purge删除数据，将无法再查询或恢复被删除时期的记录。</li>
+<li><strong>参数</strong>:
+<ul>
+<li><code class="notranslate">t:&lt;时间&gt;</code> – <strong>必需</strong>，指定清理多旧以前的数据。例如<code class="notranslate">t:30d</code>表示删除30天之前的所有数据，仅保留最近30天。</li>
+<li><code class="notranslate">r:&lt;世界名&gt;</code> – 可选，仅清理指定世界的数据（CoreProtect 1.19+版本支持）。格式如<code class="notranslate">r:#world_nether</code>。如不指定则清理所有世界数据。</li>
+<li><code class="notranslate">i:&lt;包含&gt;</code> – 可选，仅清理指定类型方块的数据（CoreProtect 1.23+支持）。如<code class="notranslate">i:stone,dirt</code>则只清除石头和泥土的旧记录。</li>
+<li><code class="notranslate">#optimize</code> – 特殊标签（2.15+ MySQL下可用）：在清理完成后优化数据库表以回收空间（SQLite自动优化无需此选项）。</li>
+</ul>
+</li>
+<li><strong>示例</strong>:
+<ul>
+<li><code class="notranslate">/co purge t:30d</code> – 删除超过30天的所有日志，只保留最近30天的数据。<em>(在游戏内执行时，出于安全限制，只能清除30天以上数据；控制台执行可低至24小时)</em>。</li>
+<li><code class="notranslate">/co purge t:7d r:#world_nether</code> – 清除Nether世界超过7天的记录，不影响其他世界的数据。</li>
+<li><code class="notranslate">/co purge t:90d i:stone,dirt #optimize</code> – 清除超过90天的石头和泥土交互记录，并优化数据库表以回收空间。</li>
+</ul>
+</li>
+<li><strong>返回信息</strong>: 确认成功删除旧数据的条目数，例如“Purged 15000 entries older than 30d”。如果使用<code class="notranslate">#optimize</code>，MySQL下会显著延长执行时间但最终释放存储空间。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.purge</code>（仅限服务器管理使用，操作具有破坏性需谨慎）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co reload</code></strong> – <strong>重载 CoreProtect 配置</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 重新加载config.yml等配置文件，使更改即时生效。通常包括刷新数据库设置、语言设置等。</li>
+<li><strong>示例</strong>: <code class="notranslate">/co reload</code> 在修改CoreProtect配置（如数据库连接信息）后执行，以应用修改。</li>
+<li><strong>返回信息</strong>: “Configuration reloaded.” 配置重载成功的提示。若配置有误将出现错误警告。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.reload</code>（默认OP）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co status</code></strong> – <strong>查看插件状态</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 显示CoreProtect当前运行状态和版本信息等。</li>
+<li><strong>示例</strong>: <code class="notranslate">/co status</code></li>
+<li><strong>返回信息</strong>: 插件版本、数据库类型及连接状态、日志总量、Consumer（日志记录处理队列）的实时状态（例如处理速率、队列长度）等。</li>
+<li><strong>权限</strong>: <code class="notranslate">coreprotect.status</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/co consumer</code></strong> – <strong>切换日志写入队列处理</strong>。</p>
+<ul>
+<li><strong>作用</strong>: <strong>仅限控制台</strong>使用的命令。可暂停或恢复CoreProtect后台记录日志的Consumer队列。如需暂停日志写入以保障数据库完整性或维护时使用。</li>
+<li><strong>参数</strong>: 控制台环境下输入<code class="notranslate">/co consumer</code> 会在暂停与继续之间切换。</li>
+<li><strong>示例</strong>: 在控制台执行<code class="notranslate">co consumer</code>暂停Consumer，再次执行恢复。</li>
+<li><strong>返回信息</strong>: 控制台显示“Consumer paused”或“Consumer resumed”。</li>
+<li><strong>权限</strong>: 控制台专用（游戏内无此权限）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>附加说明</strong>:</p>
+<ul>
+<li>
+<p><strong>分页与行数</strong>: 若 <code class="notranslate">/co lookup</code> 返回结果超过一页，可用 <code class="notranslate">/co lookup &lt;页码&gt;</code> 查看特定页，例如<code class="notranslate">/co l 2</code>。也可通过<code class="notranslate">&lt;页码&gt;:&lt;每页行数&gt;</code>设置分页行数，如<code class="notranslate">/co l 1:10</code>将每页显示10条日志（默认每页10条）。</p>
+</li>
+<li>
+<p><strong>预览模式</strong>: 使用回滚/还原指令时加上<code class="notranslate">#preview</code>不会立刻改变世界，而是在自己客户端预览效果。此时聊天会提示输入<code class="notranslate">/co confirm</code>确认执行或<code class="notranslate">/co cancel</code>取消预览。</p>
+</li>
+<li>
+<p><strong>示例回滚用法</strong>:</p>
+<ul>
+<li><code class="notranslate">**/co rollback Notch t:1h**</code> – 回滚Notch玩家过去1小时内的所有操作（默认半径为10格以内）。</li>
+<li><code class="notranslate">**/co rollback u:Notch t:1h r:#global e:stone,dirt**</code> – 全服范围回滚Notch过去1小时的操作，但<strong>排除</strong>石头和泥土。</li>
+<li><code class="notranslate">**/co rollback u:Notch t:5m a:inventory**</code> – 回滚Notch过去5分钟内的<strong>背包物品变化</strong>（如还原取出/放入背包的物品）。</li>
+</ul>
+</li>
+</ul>
+<p>CoreProtect 的查询和回滚功能非常强大，建议管理员在实际操作前使用<code class="notranslate">#preview</code>预览，以确保筛选条件正确无误再执行。所有CoreProtect指令默认需要OP权限或赋予相应的<strong>coreprotect</strong>权限节点给用户组方可使用。</p>
+<h2>CustomCrops 插件</h2>
+<p>CustomCrops 是一款高度可定制的<strong>作物种植插件</strong>，引入季节、更高级的农耕机制（洒水器、肥料等）并支持 ItemsAdder 等自定义物品插件。以下是 CustomCrops 主要指令：</p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/customcrops setseason &lt;世界&gt; &lt;季节&gt;</code></strong> – <strong>设置世界季节</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 手动更改指定世界当前的季节。季节名称根据插件配置，一般有 Spring（春）, Summer（夏）, Autumn/Fall（秋）, Winter（冬）等。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;世界&gt;</code>目标世界名称；<code class="notranslate">&lt;季节&gt;</code> 要设置的季节名称。</li>
+<li><strong>示例</strong>: <code class="notranslate">/customcrops setseason world_nether Summer</code> 将Nether世界的季节强制设为夏季。</li>
+<li><strong>返回信息</strong>: 成功则广播或提示季节已更改为指定值（如果配置了季节变化公告，玩家可能会看到季节变化的提示）。</li>
+<li><strong>权限</strong>: <strong><code class="notranslate">customcrops.admin</code></strong>（管理员权限）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/customcrops reload</code></strong> – <strong>重载 CustomCrops 配置</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 重新加载插件的配置文件、作物定义等。当您修改了CustomCrops的配置（例如季节周期、作物属性）后使用此命令应用更改。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/customcrops reload</code> 在后台重新加载所有配置与数据包。</li>
+<li><strong>返回信息</strong>: 控制台和执行者将收到配置重载完成的提示；如有错误会报告。</li>
+<li><strong>权限</strong>: <code class="notranslate">customcrops.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/customcrops simulate &lt;世界&gt; &lt;持续时间&gt;</code></strong> – <strong>模拟洒水等周期性效果</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 手动模拟一次指定世界中洒水器等随时间运行的效果。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;世界&gt;</code>目标世界；<code class="notranslate">&lt;持续时间&gt;</code> 以秒或tick为单位的模拟时长（具体格式参考插件文档）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/customcrops simulate world 120</code> 模拟world世界中洒水器运作120秒的效果，用于测试农田灌溉情况。</li>
+<li><strong>返回信息</strong>: 通常仅在控制台确认模拟完成。玩家端不会有明显输出。</li>
+<li><strong>权限</strong>: <code class="notranslate">customcrops.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/customcrops grow</code></strong> – <strong>强制生长作物</strong>（仅在新版本中提供）。</p>
+<ul>
+<li><strong>作用</strong>: 手动触发所有作物立即生长一阶段，无需水或时间等待。</li>
+<li><strong>参数</strong>: <em>无</em> 或某些版本可能支持细分（如仅强制生长当前区块作物等）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/customcrops grow</code> 将迫使所有自定义作物进行一次增长周期（测试用途）。</li>
+<li><strong>返回信息</strong>: 如果成功，将提示作物已强制生长；否则无反馈或错误消息。</li>
+<li><strong>权限</strong>: <code class="notranslate">customcrops.admin</code>。</li>
+</ul>
+</li>
+</ul>
+<p><em>(注: CustomCrops 的部分功能可能通过配置自动运行，上述模拟/强制命令主要用于管理员测试或特殊情况下调整。普通玩家没有相关指令，种植、施肥等过程均通过游戏内物品交互完成。)</em></p>
+<h2>EClean 插件</h2>
+<p>EClean 是一个实体/掉落物清理插件，支持定时清理地面物品、怪物以及<strong>垃圾桶</strong>功能等。<strong>EClean 主命令为 <code class="notranslate">/eclean</code></strong>（缩写<code class="notranslate">/ecl</code>）。主要指令如下：</p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/eclean reload</code></strong> – <strong>重载插件</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 重新加载EClean的配置文件。如更改了清理时间间隔、提示消息等配置后可使用此命令应用更改。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean reload</code> 重载EClean配置。重载后，原先计划的定时清理任务会重新开始计时。</li>
+<li><strong>返回信息</strong>: 聊天提示“EClean 已重载”，并重新计划下次清理时间。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>（管理员权限，允许使用所有EClean管理指令）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean</code></strong> – <strong>立即执行一次全局清理</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 立刻清理全服所有符合清理条件的掉落物和实体。不会显示事先的倒计时提示（慎用，可能让玩家措手不及）。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean</code> 立即清理服务器中的所有掉落物和符合条件的生物实体。</li>
+<li><strong>返回信息</strong>: 将直接输出清理结果，例如“清理完成: 掉落物 X 个, 实体 Y 个”。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean entity</code></strong> – <strong>立即清理所有实体</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 不等待计时，立刻清理全服所有符合条件的生物/实体（不包括掉落物）。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean entity</code> 立即清除多余的动物、怪物等实体，但保留地上的物品。</li>
+<li><strong>返回信息</strong>: 提示已清理的实体数量。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean entity &lt;世界名&gt;</code></strong> – <strong>清理指定世界的实体</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 仅清理所指定世界中的实体。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;世界名&gt;</code> 目标世界名称。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean entity world_nether</code> 清理Nether中的多余实体。</li>
+<li><strong>返回信息</strong>: 提示该世界被清理的实体数量。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean drop</code></strong> – <strong>立即清理所有掉落物</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 立刻清除全服地面上的所有物品掉落，不影响生物实体。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean drop</code> 清理全服务器的掉落物。</li>
+<li><strong>返回信息</strong>: 清理完成并汇报清理的掉落物数量。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean drop &lt;世界名&gt;</code></strong> – <strong>清理指定世界的掉落物</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 仅清理目标世界中的掉落物品。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;世界名&gt;</code> 目标世界。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean drop world_the_end</code> 清除末地中的所有掉落物。</li>
+<li><strong>返回信息</strong>: 报告该世界清理的掉落物数量。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean chunk</code></strong> – <strong>立即执行一次密集区块实体清理</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 检测全服各区块实体密度，清理超过配置阈值的区块内多余实体（“怪物堆积”情况）。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean chunk</code> 扫描所有区块，移除那些单区块内过于集中的实体，以降低服务器压力。</li>
+<li><strong>返回信息</strong>: 提示已清理的“密集实体”数量。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean clean chunk &lt;世界名&gt;</code></strong> – <strong>清理指定世界的密集区块实体</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 只针对某个世界进行密集实体检测和清理。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;世界名&gt;</code> 目标世界。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean clean chunk world</code> 仅扫描主世界，清除其中超出上限的区块实体。</li>
+<li><strong>返回信息</strong>: 报告该世界清理了多少密集实体。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean entity &lt;实体名&gt;</code></strong> – <strong>统计当前世界每区块中特定实体数量</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 列出当前世界每个区块内指定类型实体的数量，便于管理员发现哪里实体过多。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;实体名&gt;</code> 要统计的实体类型英文名称（支持模糊，如Zombie或Pig等）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean entity Creeper</code> 列出当前世界每个区块的苦力怕数量统计。</li>
+<li><strong>返回信息</strong>: 打开一个界面或在聊天中分页显示每个区块的统计结果。较大的数字标明实体聚集热点。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean entity &lt;实体名&gt; &lt;世界名&gt;</code></strong> – <strong>统计指定世界中特定实体</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 与上类似，但目标世界可指定而非当前世界。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;实体名&gt;</code> 实体类型；<code class="notranslate">&lt;世界名&gt;</code> 世界。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean entity Villager world</code> 统计主世界每区块村民数量。</li>
+<li><strong>返回信息</strong>: 与无世界参数时类似，只是针对目标世界输出结果。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean entity &lt;实体名&gt; &lt;世界名&gt; &lt;数量阈值&gt;</code></strong> – <strong>统计并过滤低密度结果</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 除统计外，还可隐藏掉数量不超过指定阈值的区块，以聚焦高密度区域。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;实体名&gt;</code>；<code class="notranslate">&lt;世界名&gt;</code>；<code class="notranslate">&lt;数量阈值&gt;</code> 只显示超过该数量的区块。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean entity Sheep world 5</code> 仅显示主世界里每个拥有&gt;5只羊的区块（少于等于5的不显示）。</li>
+<li><strong>返回信息</strong>: 列表将过滤掉低于阈值的区块，使管理员更容易发现异常密集区块。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean stats</code></strong> – <strong>统计当前世界实体概况</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 统计当前世界的实体总数及平均每区块数量，以及活跃区块等信息，还包括当前世界已加载区块总数等。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean stats</code> 获取自己所在世界（如world）的实体数量、区块数量和平均实体密度等信息。</li>
+<li><strong>返回信息</strong>: 例如“当前世界已加载生物: 300，掉落物: 50，已加载区块: 1024，平均每区块生物: 0.29”等简报。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean stats &lt;世界名&gt;</code></strong> – <strong>统计指定世界实体和区块</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 与上类似，但可指定世界。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;世界名&gt;</code> 目标世界。</li>
+<li><strong>示例</strong>: <code class="notranslate">/eclean stats world_the_end</code> 获取末地的实体和区块统计信息。</li>
+<li><strong>返回信息</strong>: 与<code class="notranslate">/eclean stats</code>无参的输出格式类似，但针对指定世界。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean trash</code></strong> – <strong>打开服务器垃圾桶</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 为执行者打开<strong>垃圾桶GUI</strong>（虚拟容器），可以将不需要的物品放入其中。垃圾桶内物品在预设时间后会被插件自动清除。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 玩家输入<code class="notranslate">/eclean trash</code> 打开一个特殊的界面，可以拖入想丢弃的物品；关闭界面后这些物品会暂存垃圾桶并倒计时清除。</li>
+<li><strong>返回信息</strong>: 无文字输出，直接打开一个容器界面（标题通常为“Trash”或配置指定名称）。</li>
+<li><strong>权限</strong>: 普通玩家使用垃圾桶功能需权限 <code class="notranslate">eclean.trash</code>（可配置给予所有玩家）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/eclean show</code></strong> – <strong>查看密集实体统计GUI</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 打开一个图形界面（GUI），显示当前监测到的密集区块信息。通常用于在定时清理前让管理员快速了解哪里会被视作密集。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 管理员执行<code class="notranslate">/eclean show</code> 打开GUI列表，按区块列出最近一次密集检测的高密度实体区块。可能以红、黄、绿等颜色区分严重程度。</li>
+<li><strong>返回信息</strong>: 无直接聊天输出，显示GUI界面。</li>
+<li><strong>权限</strong>: <code class="notranslate">eclean.admin</code>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>权限要求</strong>:</p>
+<ul>
+<li><code class="notranslate">eclean.admin</code> – 授予使用上述<strong>所有</strong>清理和统计管理指令的权限，通常仅给管理员/OP。</li>
+<li><code class="notranslate">eclean.trash</code> – 允许玩家使用<code class="notranslate">/eclean trash</code>垃圾桶指令（若不赋予，普通玩家无法打开垃圾桶界面）。</li>
+</ul>
+<p><strong>提示</strong>: EClean 插件会通过配置自动周期性清理掉落物和实体。管理员可在配置中设置清理间隔（CleanItemInterval 等）和清理前提醒。如果启用了提醒，玩家将在聊天中看到诸如“还有 60 秒将清理掉落物！”的广播。使用命令执行即时清理时则不会有提前提醒，所以请谨慎使用，以免玩家措手不及。</p>
+<h2>Econoblocks 插件</h2>
+<p>Econoblocks 是一款奖励挖矿的经济插件，可让玩家在采集方块时获得金钱、物品、药水效果等奖励，并支持倍率系统等。其主要指令包括：</p>
+<p><strong>普通玩家指令:</strong></p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/econoblocks</code></strong> – <strong>查看插件帮助菜单</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 显示Econoblocks的基本信息和可用指令列表。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 玩家输入<code class="notranslate">/econoblocks</code> 将收到该插件的简要说明和可用指令提示，如如何查看个人信息等。</li>
+<li><strong>返回信息</strong>: Econoblocks 插件的帮助指南。例如提示使用<code class="notranslate">/econoblocks toggle</code>来开关收益提示等。</li>
+<li><strong>权限</strong>: 所有玩家可用（无特殊权限要求）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/econoblocks toggle</code></strong> – <strong>切换挖矿收益消息显示</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 玩家个人可用此命令来开启或关闭自己收到的挖矿收益聊天提示。如果不想每次挖矿都看到金钱收益提示，可关闭。再次执行则重新开启。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 玩家执行<code class="notranslate">/econoblocks toggle</code>，如果原本每次挖矿都会提示“+10 金币”，关闭后将不再看到这些提示。但收益仍然获得，只是静默了消息。</li>
+<li><strong>返回信息</strong>: 切换后会提示“挖矿收益提示已关闭”或“已开启”。</li>
+<li><strong>权限</strong>: <code class="notranslate">econoblocks.toggle</code>（默认所有玩家已启用该权限）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>管理员指令:</strong></p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/econoblocks profile &lt;玩家名&gt;</code></strong> – <strong>查看玩家倍率配置</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 检查某玩家当前被应用的收益倍率组或个人倍率。Econoblocks支持为特定权限组或玩家设置挖矿金钱倍数，此命令可查看其详情。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;玩家名&gt;</code> 目标玩家。</li>
+<li><strong>示例</strong>: <code class="notranslate">/econoblocks profile Alex</code> 列出玩家Alex当前拥有的所有自定义倍率（如特定方块的倍率、世界倍率、手持工具倍率等）。</li>
+<li><strong>返回信息</strong>: 包括玩家各类别倍率值。例如：“Block Multiplier: 1.2x, World Multiplier: 1.0x, Tool Multiplier: 0.8x”等。</li>
+<li><strong>权限</strong>: <code class="notranslate">econoblocks.profile</code> 或 <code class="notranslate">econoblocks.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/econoblocks check &lt;block|custom&gt; &lt;名称&gt;</code></strong> – <strong>检查方块或自定义掉落配置</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 查看某方块或某自定义方块的掉落奖励设定详情。插件允许配置各方块掉落何种奖励及几率，本命令便于管理员查询。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;block|custom&gt;</code> 指定要查询普通方块还是CustomCrops/ItemsAdder等自定义方块；<code class="notranslate">&lt;名称&gt;</code> 方块名称或自定义方块ID。</li>
+<li><strong>示例</strong>: <code class="notranslate">/econoblocks check block diamond_ore</code> 将显示钻石矿石的掉落奖励配置（比如挖掘钻石矿给予多少钱，或额外掉落物品概率等）。</li>
+<li><strong>返回信息</strong>: 详细的掉落配置，包括该方块对应的<strong>掉落表</strong>内容，如金钱奖励范围、物品掉落及几率、药水效果奖励等。</li>
+<li><strong>权限</strong>: <code class="notranslate">econoblocks.check</code> 或 <code class="notranslate">econoblocks.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/econoblocks multiplier add &lt;玩家名&gt; &lt;类型&gt; &lt;名称&gt; &lt;倍率&gt;</code></strong> – <strong>为玩家添加自定义倍率</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 给某玩家设置一个额外的收益倍率。例如可以给VIP玩家对某种方块2倍奖励，或对某世界增加倍率。这些自定义倍率将与默认倍率叠加。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;玩家名&gt;</code> 目标玩家；<code class="notranslate">&lt;类型&gt;</code> 倍率类型，可为<code class="notranslate">block</code>（方块）、<code class="notranslate">tool</code>（工具）、<code class="notranslate">world</code>（世界）、<code class="notranslate">custom_block</code>（自定义方块）、<code class="notranslate">custom_tool</code>（自定义工具）；<code class="notranslate">&lt;名称&gt;</code> 指定具体的方块名、工具名或世界名等；<code class="notranslate">&lt;倍率&gt;</code> 浮点数形式的倍率值（1.0为100%）。</li>
+<li><strong>示例</strong>: <code class="notranslate">/econoblocks multiplier add Steve block diamond_ore 2.0</code> 为玩家Steve设置对钻石矿石的金钱奖励倍率2倍。Steve挖钻石矿将获得双倍金钱奖励。</li>
+<li><strong>返回信息</strong>: 聊天提示已成功为该玩家添加倍率项。例如“Steve 的 diamond_ore 倍率已设为 2.0”。</li>
+<li><strong>权限</strong>: <code class="notranslate">econoblocks.multiplier</code> 或 <code class="notranslate">econoblocks.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/econoblocks multiplier remove &lt;玩家名&gt; &lt;类型&gt; &lt;名称&gt;</code></strong> – <strong>移除玩家自定义倍率</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 取消之前通过<code class="notranslate">/econoblocks multiplier add</code>给玩家设置的特定倍率。</li>
+<li><strong>参数</strong>: <code class="notranslate">&lt;玩家名&gt;</code> 目标玩家；<code class="notranslate">&lt;类型&gt;</code> 和 <code class="notranslate">&lt;名称&gt;</code> 对应要移除的倍率类型和对象。</li>
+<li><strong>示例</strong>: <code class="notranslate">/econoblocks multiplier remove Steve block diamond_ore</code> 移除前例中Steve针对钻石矿石的倍率，让其恢复默认倍率。</li>
+<li><strong>返回信息</strong>: 提示该玩家相应倍率已移除。如“Steve 的 diamond_ore 自定义倍率已移除”。</li>
+<li><strong>权限</strong>: <code class="notranslate">econoblocks.multiplier</code> 或 <code class="notranslate">econoblocks.admin</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/econoblocks reload</code></strong> – <strong>重载 Econoblocks 插件</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 重新加载配置文件，包括方块掉落表、倍率设置等。更改配置后应执行此命令。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/econoblocks reload</code> 重载Econoblocks所有配置，使修改的奖励或倍率设置生效。</li>
+<li><strong>返回信息</strong>: 控制台和执行者都会收到插件重载完成的提示。</li>
+<li><strong>权限</strong>: <code class="notranslate">econoblocks.reload</code> 或 <code class="notranslate">econoblocks.admin</code>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>权限说明</strong>:</p>
+<ul>
+<li><code class="notranslate">econoblocks.admin</code> – 管理权限，拥有该权限者可使用Econoblocks全部管理指令（相当于拥有<code class="notranslate">profile</code>, <code class="notranslate">check</code>, <code class="notranslate">multiplier</code>, <code class="notranslate">reload</code>等子权限）。</li>
+<li>其他子权限如<code class="notranslate">econoblocks.toggle</code>, <code class="notranslate">econoblocks.profile</code>等可分别赋予需要的角色。</li>
+<li><code class="notranslate">econoblocks.group.&lt;组名&gt;</code> – 将玩家归入预设的倍率组（在配置中定义不同组的倍率组合）。直接赋予某玩家对应组权限可应用整组倍率。</li>
+</ul>
+<p><strong>提示</strong>: Econoblocks 可与 Vault、PlayerPoints 等经济系统联动。玩家在挖掘方块获得货币时，通常会在聊天显示如“你挖到 10 金币!”的提示，可通过<code class="notranslate">/econoblocks toggle</code>自行关闭提示但不影响收益。插件还提供了多种掉落类型（例如直接掉落物品、给予药水效果、执行命令等），管理员可在配置中详设。请注意合理配置每种方块的奖励以保持经济平衡。</p>
+<h2>Essentials 插件</h2>
+<p>Essentials（或 EssentialsX）是常用的<strong>服务器基础功能插件</strong>，提供了非常多的基础指令（超过100条），涵盖玩家通讯、传送、家和出生点、经济、管理等各方面。下面按功能分类列出常用指令及用法：</p>
+<h3>通用 &amp; 信息指令</h3>
+<ul>
+<li><strong><code class="notranslate">/help [页码]</code></strong> – <strong>帮助菜单</strong>。显示服务器可用命令列表（由插件整合输出）。<code class="notranslate">/help 2</code>翻到第二页。<em>(Essentials会接管默认/help，使其包含所有Essentials指令说明)</em>。</li>
+<li><strong><code class="notranslate">/list</code></strong> – <strong>查看在线玩家列表</strong>。列出当前在线玩家及分组（隐藏玩家需特殊权限才能见）。</li>
+<li><strong><code class="notranslate">/mail send &lt;玩家&gt; &lt;内容&gt;</code></strong> – <strong>发送站内信</strong>。给不在线的玩家发送邮件，TA下次上线可用<code class="notranslate">/mail read</code>查看。</li>
+<li><strong><code class="notranslate">/mail read</code></strong> – <strong>读取邮件</strong>。查看收到的站内信列表。</li>
+<li><strong><code class="notranslate">/mail clear</code></strong> – <strong>清除所有已读邮件</strong>。</li>
+<li><strong><code class="notranslate">/motd</code></strong> – <strong>查看每日公告</strong>（Message of the Day）。显示服务器 MOTD 信息（通常在配置文件 motd.txt 中定义）。</li>
+<li><strong><code class="notranslate">/rules</code></strong> – <strong>查看服务器规则</strong>。显示规则列表（配置于 rules.txt）。</li>
+<li><strong><code class="notranslate">/ping</code></strong> – <strong>查看延迟</strong>。返回你与服务器的延迟毫秒值。</li>
+<li><strong><code class="notranslate">/afk</code></strong> – <strong>设置暂离状态</strong>。标记自己为AFK（Away From Keyboard），通常会广播“&lt;玩家&gt; is now AFK”。移动或聊天会自动取消AFK状态。</li>
+<li><strong><code class="notranslate">/back</code></strong> – <strong>返回上一个位置</strong>。在死亡或传送后使用，回到死亡地点或传送前的位置。玩家死亡后若具备<code class="notranslate">essentials.back.ondeath</code>权限可用此命令找回尸体。</li>
+<li><strong><code class="notranslate">/backpack</code></strong> – <strong>打开额外背包</strong>（如果启用）。EssentialsX支持通过<code class="notranslate">essentials.backpack</code>权限给予玩家一个虚拟背包，可用此命令访问。</li>
+</ul>
+<h3>私信 &amp; 社交指令</h3>
+<ul>
+<li><strong><code class="notranslate">/msg &lt;玩家&gt; &lt;消息&gt;</code></strong> 或 <strong><code class="notranslate">/tell</code></strong>, <strong><code class="notranslate">/whisper</code></strong> – <strong>私聊</strong>。给指定玩家发送私聊消息。</li>
+<li><strong><code class="notranslate">/r &lt;消息&gt;</code></strong> – <strong>回复</strong>最后收到的私聊。快捷向刚才私信你的人回复信息。</li>
+<li><strong><code class="notranslate">/ignore &lt;玩家&gt;</code></strong> – <strong>屏蔽玩家消息</strong>。将某玩家加入你的忽略列表，其私聊和公共聊天对你不可见。</li>
+<li><strong><code class="notranslate">/unignore &lt;玩家&gt;</code></strong> – <strong>取消忽略</strong>。将玩家从忽略列表移除。</li>
+<li><strong><code class="notranslate">/nick &lt;昵称&gt;</code></strong> – <strong>设置昵称</strong>（需要权限）。允许玩家设置彩色昵称显示名，如<code class="notranslate">/nick &amp;aSteve</code>将名字改为绿色的Steve。</li>
+<li><strong><code class="notranslate">/realname &lt;昵称&gt;</code></strong> – <strong>查询昵称对应玩家</strong>。如果不知道某彩色昵称玩家的真实ID，可用此命令。</li>
+</ul>
+<h3>传送类指令</h3>
+<ul>
+<li><strong><code class="notranslate">/spawn</code></strong> – <strong>前往服务器主出生点</strong>。将玩家传送至主世界的设定Spawn点。</li>
+<li><strong><code class="notranslate">/setspawn</code></strong> – <strong>设置全服出生点</strong>（管理）。将当前所在位置设置为新的<code class="notranslate">/spawn</code>位置（需要OP或<code class="notranslate">essentials.setspawn</code>权限）。</li>
+<li><strong><code class="notranslate">/home [家名]</code></strong> – <strong>回家</strong>。传送到自己设定的家(home)位置。支持多Home时需指定名字；不指定则默认主home。</li>
+<li><strong><code class="notranslate">/sethome [家名]</code></strong> – <strong>设置家</strong>。将当前地点保存为一个home点。默认玩家只能设置1个家（可在配置调整或通过权限组扩展 <code class="notranslate">essentials.sethome.multiple</code>）。若允许多home，可给每个home命名。</li>
+<li><strong><code class="notranslate">/delhome [家名]</code></strong> – <strong>删除家</strong>。移除一个home点。</li>
+<li><strong><code class="notranslate">/homes</code></strong> – <strong>列出所有家</strong>。显示自己设定的全部home名称及坐标。</li>
+<li><strong><code class="notranslate">/warp &lt;地标&gt;</code></strong> – <strong>前往公共传送点</strong>。传送到管理员预设的Warp点（公共地标）。</li>
+<li><strong><code class="notranslate">/warps</code></strong> – <strong>列出所有Warp</strong>。显示可用的公共Warp列表。</li>
+<li><strong><code class="notranslate">/setwarp &lt;名称&gt;</code></strong> – <strong>创建公共Warp</strong>（管理）。将当前位置设为一个新的warp。可通过<code class="notranslate">-p</code>参数设为付费warp，或<code class="notranslate">-r</code>设为权限warp。</li>
+<li><strong><code class="notranslate">/delwarp &lt;名称&gt;</code></strong> – <strong>删除Warp</strong>（管理）。移除指定名称的公共warp点。</li>
+<li><strong><code class="notranslate">/tpa &lt;玩家&gt;</code></strong> – <strong>请求传送到他人</strong>。向目标玩家发送请求，待对方同意后自动将自己传送到对方身边。</li>
+<li><strong><code class="notranslate">/tpahere &lt;玩家&gt;</code></strong> – <strong>请求将他人传送到你这里</strong>。向目标玩家发出请求把对方传送到自己位置，需要对方接受。</li>
+<li><strong><code class="notranslate">/tpaccept</code></strong> – <strong>接受传送请求</strong>。同意最近收到的一个传送请求（无论tpa或tpahere），执行后双方完成传送。</li>
+<li><strong><code class="notranslate">/tpdeny</code></strong> – <strong>拒绝传送请求</strong>。拒绝并取消该次请求。</li>
+<li><strong><code class="notranslate">/tptoggle</code></strong> – <strong>切换传送请求开关</strong>。关闭后将拒绝所有传送请求(tpa)，再次开启才可接受请求。</li>
+<li><strong><code class="notranslate">/tp &lt;玩家1&gt; &lt;玩家2&gt;</code></strong> – <strong>传送玩家</strong>（管理员）。将玩家1直接传送到玩家2所在地。</li>
+<li><strong><code class="notranslate">/tphere &lt;玩家&gt;</code></strong> – <strong>召唤玩家</strong>（管理员）。将指定玩家直接传送到自己位置。</li>
+<li><strong><code class="notranslate">/tpall</code></strong> – <strong>全员传送</strong>（管理员）。将服务器所有玩家传送到自己当前位置。</li>
+<li><strong><code class="notranslate">/world &lt;世界&gt;</code></strong> – <strong>快速切换世界</strong>。传送到指定世界的默认出生点（需要配置MultiVerse等支持）。Essentials自带的此命令需启用多世界。</li>
+</ul>
+<h3>时间和天气指令</h3>
+<ul>
+<li><strong><code class="notranslate">/time &lt;day|night|&lt;数值&gt;&gt;</code></strong> – <strong>设置服务器时间</strong>（管理员）。例如<code class="notranslate">/time day</code>将世界时间调至白天6:00，<code class="notranslate">/time 18000</code>设置时间到指定tick（18000为午夜）。需<code class="notranslate">essentials.time</code>.</li>
+<li><strong><code class="notranslate">/weather &lt;sun|rain|storm&gt;</code></strong> – <strong>更改天气</strong>（管理员）。如<code class="notranslate">/weather rain</code>使当前世界下雨，<code class="notranslate">/weather sun</code>放晴。</li>
+<li><strong><code class="notranslate">/ptime &lt;玩家&gt; &lt;day|night|reset&gt;</code></strong> – <strong>设置个人客户端时间</strong>。允许给予玩家本地的时间效果，不影响服务器时间。例如玩家可用<code class="notranslate">/ptime night</code>让自己客户端变夜晚（需权限<code class="notranslate">essentials.time</code>）。<code class="notranslate">/ptime reset</code>恢复同步服务器。</li>
+<li><strong><code class="notranslate">/pweather &lt;sun|rain|storm|reset&gt;</code></strong> – <strong>设置个人客户端天气</strong>。类似ptime，对自己设置本地天气。</li>
+</ul>
+<h3>经济和物品指令</h3>
+<ul>
+<li>
+<p><strong><code class="notranslate">/balance</code></strong> 或 <strong><code class="notranslate">/bal</code></strong>, <strong><code class="notranslate">/money</code></strong> – <strong>查询余额</strong>。显示自己当前拥有的经济余额金额。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/bal &lt;玩家&gt;</code></strong> – <strong>查询他人余额</strong>（需权限<code class="notranslate">essentials.balance.others</code>）。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/pay &lt;玩家&gt; &lt;金额&gt;</code></strong> – <strong>转账</strong>。将指定金额货币支付给目标玩家。如果自己余额不足会提示失败。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/baltop [页]</code></strong> – <strong>富豪榜</strong>。列出全服余额最高的玩家排行榜，默认每页10人。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/eco give &lt;玩家&gt; &lt;金额&gt;</code></strong>, <strong><code class="notranslate">/eco take &lt;玩家&gt; &lt;金额&gt;</code></strong> – <strong>发放/扣除货币</strong>（管理员）。直接增加或减少某玩家账户上的货币。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/eco set &lt;玩家&gt; &lt;金额&gt;</code></strong> – <strong>设置玩家余额</strong>（管理员）。将玩家的余额设为指定值。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/worth &lt;物品&gt;</code></strong> – <strong>查看物品价值</strong>。查询手持物品或指定物品的出售价值（需Essentials内置定价表支持）。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/sell &lt;手持物品数量/all&gt;</code></strong> – <strong>出售物品</strong>。将手中物品按照预设价格卖给服务器。例如<code class="notranslate">/sell hand</code>卖出当前手持物品，<code class="notranslate">/sell all</code>卖出背包中所有可出售物品。收益将加入余额。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/buy &lt;物品ID&gt; [数量]</code></strong> – <strong>购买物品</strong>（如果启用服务器商店）。Essentials可配置交易签或命令商店，<code class="notranslate">/buy</code>命令按配置价格从服务器购买物品。一般默认未启用，需要配置商品清单和权限。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/item &lt;物品ID&gt; [数量]</code></strong> – <strong>获取物品</strong>（管理员）。快速从空中获取指定物品到自己背包，相当于/give。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/give &lt;玩家&gt; &lt;物品ID&gt; [数量]</code></strong> – <strong>给予物品</strong>（管理员）。将指定物品直接发送到目标玩家背包。支持<code class="notranslate">minecraft:</code>前缀或Essentials自带简称。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/i &lt;物品ID&gt; [数量]</code></strong> – <code class="notranslate">/item</code>命令的简写。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/more</code></strong> – <strong>增加手持物品至满 stack</strong>。将手中物品数量叠加到其最大堆叠上限（管理员或需权限）。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/repair [hand|all]</code></strong> – <strong>修复物品</strong>。修复手持物品耐久，<code class="notranslate">/repair all</code>修复身上所有装备（需要<code class="notranslate">essentials.repair</code>权限，普通玩家通常有<code class="notranslate">essentials.repair</code>用于付费修理或次数限制）。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/enchant &lt;附魔名&gt; [等级]</code></strong> – <strong>附魔手持物品</strong>。给当前持有物品添加指定附魔，需管理员或使用权限<code class="notranslate">essentials.enchant</code>。</p>
+</li>
+<li>
+<p><strong><code class="notranslate">/potioneffect &lt;效果&gt; &lt;时间&gt; &lt;强度&gt;</code></strong> – <strong>施加药水效果</strong>（管理员）。给自己添加指定药水效果，也可<code class="notranslate">/effect</code>。</p>
+</li>
+</ul>
+<h3>其他实用指令</h3>
+<ul>
+<li><strong><code class="notranslate">/fly</code></strong> – <strong>飞行模式</strong>。切换自身飞行能力开关（需要权限<code class="notranslate">essentials.fly</code>，通常给予VIP或管理员）。</li>
+<li><strong><code class="notranslate">/speed &lt;等级&gt;</code></strong> – <strong>调整行走/飞行速度</strong>。0-10范围，普通行走默认1，飞行默认1。需<code class="notranslate">essentials.speed</code>权限。<code class="notranslate">/speed 5</code>显著加快速度。</li>
+<li><strong><code class="notranslate">/god</code></strong> – <strong>无敌模式</strong>。开启后玩家不会受到任何伤害，再次执行关闭。需<code class="notranslate">essentials.god</code>权限。</li>
+<li><strong><code class="notranslate">/heal [玩家]</code></strong> – <strong>治愈</strong>。立即治满自身或指定玩家的生命值和饥饿（并消除负面效果）。<code class="notranslate">/feed</code>只恢复饥饿值。需要<code class="notranslate">essentials.heal</code>或<code class="notranslate">essentials.heal.others</code>权限。</li>
+<li><strong><code class="notranslate">/feed [玩家]</code></strong> – <strong>填饱肚子</strong>。恢复饥饿值到满。（权限<code class="notranslate">essentials.feed</code>）。</li>
+<li><strong><code class="notranslate">/workbench</code></strong> 或 <strong><code class="notranslate">/wb</code></strong> – <strong>虚拟工作台</strong>。打开一个3x3工作台GUI，无需实际工作台方块。权限<code class="notranslate">essentials.workbench</code>。</li>
+<li><strong><code class="notranslate">/enderchest</code></strong> 或 <strong><code class="notranslate">/ec</code></strong> – <strong>虚拟末影箱</strong>。打开自己的末影箱界面。<code class="notranslate">/enderchest &lt;玩家&gt;</code>可查看他人末影箱（管理员权限）。</li>
+<li><strong><code class="notranslate">/hat</code></strong> – <strong>戴帽子</strong>。将手持物品戴在头上作为头盔（需要<code class="notranslate">essentials.hat</code>，通常给予玩家娱乐）。</li>
+<li><strong><code class="notranslate">/sethome &lt;名称&gt;</code></strong>, <strong><code class="notranslate">/home &lt;名称&gt;</code></strong> – 家的设置与使用（见上文传送类）。</li>
+<li><strong><code class="notranslate">/setwarp &lt;名称&gt;</code></strong>, <strong><code class="notranslate">/warp &lt;名称&gt;</code></strong> – Warp点设置与使用（见传送类）。</li>
+<li><strong><code class="notranslate">/compass</code></strong> – <strong>指南针方向</strong>。输出你面朝的方向（北东南西）和角度。</li>
+<li><strong><code class="notranslate">/depth</code></strong> – <strong>当前深度</strong>。显示你当前所在的高度层（如地表高度，海拔等）。</li>
+<li><strong><code class="notranslate">/suicide</code></strong> – <strong>自杀</strong>。令自己死亡（可能用于重置状态等）。</li>
+</ul>
+<h3>管理员专用/管理类指令</h3>
+<ul>
+<li><strong><code class="notranslate">/kick &lt;玩家&gt; [原因]</code></strong> – <strong>踢出玩家</strong>。将某玩家踢下线，可附加原因广播给服务器。</li>
+<li><strong><code class="notranslate">/ban &lt;玩家&gt; [原因]</code></strong> – <strong>封禁玩家</strong>。将玩家永久封禁，原因会记录和告知。</li>
+<li><strong><code class="notranslate">/tempban &lt;玩家&gt; &lt;时间&gt; [原因]</code></strong> – <strong>临时封禁</strong>。如<code class="notranslate">/tempban Notch 3d 违反规定</code>封禁Notch 3天。支持时间格式：s秒,m分钟,h小时,d天,w周。</li>
+<li><strong><code class="notranslate">/unban &lt;玩家&gt;</code></strong> – <strong>解封</strong>。解除对某玩家的封禁（包括临时封禁提前解除）。</li>
+<li><strong><code class="notranslate">/mute &lt;玩家&gt; [时间]</code></strong> – <strong>禁言</strong>。阻止玩家发送聊天消息，可附加持续时间。</li>
+<li><strong><code class="notranslate">/unmute &lt;玩家&gt;</code></strong> – <strong>取消禁言</strong>。</li>
+<li><strong><code class="notranslate">/jail &lt;玩家&gt; &lt;牢房名&gt; [时间]</code></strong> – <strong>监禁</strong>。将玩家传送至预设的Jail区域并限制其活动，可设置释放时间。</li>
+<li><strong><code class="notranslate">/unjail &lt;玩家&gt;</code></strong> – <strong>释放</strong>被监禁玩家。</li>
+<li><strong><code class="notranslate">/op &lt;玩家&gt;</code></strong> / <strong><code class="notranslate">/deop &lt;玩家&gt;</code></strong> – 赋予或移除服务器管理员(Operator)状态。</li>
+<li><strong><code class="notranslate">/broadcast &lt;消息&gt;</code></strong> 或 <strong><code class="notranslate">/bc</code></strong> – <strong>广播公告</strong>。以醒目的格式向全服广播一条消息（通常为[Broadcast]前缀加彩色）。</li>
+<li><strong><code class="notranslate">/setspawn</code></strong> – 设置主世界spawn点（见前文）。</li>
+<li><strong><code class="notranslate">/spawnmob &lt;类型&gt; [数量]</code></strong> – <strong>召唤生物</strong>。生成指定类型生物若干只在当前位置。需<code class="notranslate">essentials.spawnmob</code>权限。</li>
+<li><strong><code class="notranslate">/vanish</code></strong> – <strong>隐身模式</strong>。让自己对普通玩家不可见（需要EssentialsAntiBuild或EssentialsX附加功能支持，权限<code class="notranslate">essentials.vanish</code>）。</li>
+<li><strong><code class="notranslate">/gm &lt;模式&gt;</code></strong> 或 <strong><code class="notranslate">/gamemode &lt;模式&gt;</code></strong> – <strong>切换游戏模式</strong>。Essentials会简化<code class="notranslate">/gamemode</code>命令，如<code class="notranslate">/gm 1</code>切换创造，<code class="notranslate">/gm 0</code>生存。需<code class="notranslate">essentials.gamemode</code>权限。</li>
+<li><strong><code class="notranslate">/speed &lt;数字&gt;</code></strong> – 前述改变移动/飞行速度命令，管理员亦常用来快速飞行巡查。</li>
+<li><strong><code class="notranslate">/whois &lt;玩家&gt;</code></strong> 或 <strong><code class="notranslate">/essentials &lt;玩家&gt;</code></strong> – <strong>玩家信息</strong>。查询玩家的IP地址、最后在线、权限组等详细信息。</li>
+<li><strong><code class="notranslate">/invsee &lt;玩家&gt;</code></strong> – <strong>检查玩家背包</strong>。打开目标玩家的主物品栏视图（若有修改权限则可拿取物品，否则默认为仅查看）。</li>
+<li><strong><code class="notranslate">/kill &lt;玩家&gt;</code></strong> – <strong>杀死玩家</strong>。使目标玩家立即死亡。</li>
+<li><strong><code class="notranslate">/setspawn [world]</code></strong> – 设定当前所在位置为某世界的spawn点。单世界服只需<code class="notranslate">/setspawn</code>。多世界环境下可<code class="notranslate">/setspawn &lt;world&gt;</code>指定。</li>
+</ul>
+<p><strong>Essentials 权限</strong>: Essentials指令的权限控制非常细致。常见权限节点如：</p>
+<ul>
+<li><code class="notranslate">essentials.home</code>, <code class="notranslate">essentials.sethome</code>（设置/使用家），<code class="notranslate">essentials.warp</code>, <code class="notranslate">essentials.warp.list</code>（使用warp及查看列表），</li>
+<li><code class="notranslate">essentials.tpa</code>, <code class="notranslate">essentials.tpaccept</code>（传送请求），</li>
+<li><code class="notranslate">essentials.pay</code>, <code class="notranslate">essentials.balance</code>（经济），</li>
+<li><code class="notranslate">essentials.fly</code>, <code class="notranslate">essentials.heal</code>, <code class="notranslate">essentials.feed</code>, <code class="notranslate">essentials.repair</code> 等对应各种实用功能。<br>
+默认情况下，很多基础命令对所有玩家开放（如<code class="notranslate">/sethome</code>,<code class="notranslate">/spawn</code>,<code class="notranslate">/balance</code>等），管理命令只对OP开放。可以通过权限插件（LuckPerms等）按需赋予或剥夺Essentials权限节点以定制玩家可用指令集。</li>
+</ul>
+<p><strong>备注</strong>: Essentials 插件功能极其丰富，上述仅列出常用部分指令。Essentials配置文件可调整大量选项，如是否允许<code class="notranslate">/nick</code>彩色昵称、<code class="notranslate">/home</code>数量限制、经济初始金额等。建议服务器管理员查看Essentials的Wiki或帮助文档获取完整指令和权限列表并根据需要配置。Essentials各子模块（Chat、Spawn、Protect等）也提供针对性功能，这里主要涵盖Essentials-Core的指令。</p>
+<h2>GSit 插件</h2>
+<p>GSit 是一个增加玩家姿势动作的插件，允许玩家<strong>坐下、躺下、匍匐、旋转等</strong>动作，还支持玩家相互叠坐（骑乘）。插件默认大部分动作所有玩家都可使用，部分功能需要权限控制。主要指令如下：</p>
+<ul>
+<li>
+<p><strong><code class="notranslate">/sit</code></strong> – <strong>坐下</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 让角色在原地坐下。如果对某些可坐的方块（如楼梯）右键，也能坐下，但<code class="notranslate">/sit</code>命令强制在任意方块处坐下。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 玩家站着输入<code class="notranslate">/sit</code>，角色将直接在原地坐下（呈现出坐姿态势）。再次使用<code class="notranslate">/sit</code>或移动即可站起。</li>
+<li><strong>返回信息</strong>: 无特别文本提示，玩家模型会改变姿势为坐。</li>
+<li><strong>权限</strong>: <strong><code class="notranslate">GSit.Sit</code></strong>（默认所有玩家可用）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/lay</code></strong> – <strong>躺下</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 使角色平躺在地面上，就像在床上睡觉的姿势，但可在任意地点使用。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 输入<code class="notranslate">/lay</code>，角色将躺倒在地（仰卧姿势）。可用于角色装死或休息的情景。再次执行或挪动恢复站立。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.Lay</code>（默认开放给所有玩家）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/bellyflop</code></strong> – <strong>趴下</strong>（俯卧）。</p>
+<ul>
+<li><strong>作用</strong>: 让角色俯卧在地，类似匍匐但不会移动。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/bellyflop</code> 后角色会面朝下趴在地上。这常用于角色扮演倒地等场景。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.Bellyflop</code>（默认所有玩家可用）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/crawl</code></strong> – <strong>匍匐前进</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 让角色进入匍匐姿势，可以贴地移动（类似1.14+游泳状态在地上）。适用于钻1格高通道。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 玩家执行<code class="notranslate">/crawl</code>后，角色以游泳的姿态在地面爬行，可通过方向键移动穿过一格高空间。再次<code class="notranslate">/crawl</code>或站立取消。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.Crawl</code>（默认所有玩家可用）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/spin</code></strong> – <strong>旋转</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 角色原地旋转360度并伴有特效粒子。属于娱乐性动作。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 输入<code class="notranslate">/spin</code>，你的角色会原地快速旋转一圈，同时可能伴随插件特定的粒子效果（如星星）。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.Spin</code>（默认所有玩家可用）。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/sit toggle</code></strong> – <strong>切换右键坐下功能</strong>。</p>
+<ul>
+<li><strong>作用</strong>: GSit 默认允许玩家右键可坐方块（台阶等）自动坐下。使用此命令可开关<strong>右键坐</strong>功能。关闭后玩家右键方块将不会坐下，只有通过<code class="notranslate">/sit</code>命令才能坐。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/sit toggle</code> 如果玩家觉得右键误坐尴尬，可以执行此命令禁用自己右键坐下功能；再次执行重新启用。</li>
+<li><strong>返回信息</strong>: 提示“坐下点击 已禁用/已启用”。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.SitToggle</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/sit playertoggle</code></strong> – <strong>切换被坐功能</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 控制是否允许他人右键坐在你身上。GSit 支持玩家对玩家坐肩（叠罗汉），此命令开关别人能否坐你。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: <code class="notranslate">/sit playertoggle</code> 关闭后，其他玩家将无法右键坐在你头上或腿上；再次执行可重新允许。</li>
+<li><strong>返回信息</strong>: “玩家骑乘 已禁用/已启用”。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.PlayerSitToggle</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="notranslate">/gsitreload</code></strong> 或 <strong><code class="notranslate">/gsitrl</code></strong> – <strong>重载 GSit 配置</strong>。</p>
+<ul>
+<li><strong>作用</strong>: 重新加载GSit的配置文件。用于在更改设置（如黑名单世界、不安全坐标开关、叠坐人数上限等）后应用新配置。</li>
+<li><strong>参数</strong>: 无。</li>
+<li><strong>示例</strong>: 管理员执行<code class="notranslate">/gsitrl</code>重载插件，插件将读取新的config.yml设置并应用，如调整允许叠坐的玩家数量等。</li>
+<li><strong>返回信息</strong>: 控制台或执行者收到“GSit 配置已重载”。</li>
+<li><strong>权限</strong>: <code class="notranslate">GSit.Reload</code>（仅管理员）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>无命令的功能 &amp; 其他权限</strong>:</p>
+<ul>
+<li><strong>右键坐下</strong>: 除<code class="notranslate">/sit</code>命令外，GSit允许玩家<strong>右键点击</strong>楼梯、台阶、台阶之类的方块坐下，此功能默认开启（可用<code class="notranslate">/sit toggle</code>个人关闭）。权限<code class="notranslate">GSit.SitClick</code>控制此行为。默认所有玩家可坐可点。</li>
+<li><strong>右键玩家叠坐</strong>: 玩家可右键另一个玩家肩膀来坐在其头顶（需被坐者未禁止）。权限节点<code class="notranslate">GSit.PlayerSit</code>控制是否可执行此行为，默认启用。叠坐高度、数量可在配置调整。</li>
+<li><strong>踢下乘客</strong>: 管理员具有<code class="notranslate">GSit.Kick.Sit</code>和<code class="notranslate">GSit.Kick.Pose</code>权限，可以强制将坐着或摆姿势的玩家复位站立。例如如果玩家卡在某姿势，可用命令<code class="notranslate">/gsit kick &lt;玩家&gt;</code>（注意GSit没有显式的kick子命令，但有权限可通过交互实现kick）。一般情况下无需专门指令，因为玩家移动即可自行解除。</li>
+<li><strong>世界黑名单</strong>: GSit配置可设定某些世界禁止坐/躺等（WorldBlack列表）。权限<code class="notranslate">GSit.Bypass.World</code>可使管理员无视黑名单，在任何世界都能使用GSit动作。</li>
+</ul>
+<p>GSit 插件主要用于趣味和角色扮演，不影响实际玩法。所有动作在退出服务器或死亡后都会重置为站立状态。玩家如果遇到无法自行站起的情况（极少），管理员可通过飞行碰撞或使用GSit的踢乘客权限将其复位。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://73410.github.io/news.github.io">pcc新闻主页</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","73410/news.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
