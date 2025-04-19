@@ -1,0 +1,1 @@
+玩家jame再次破坏了我的建筑。我的名字是brockh090。之前的issue链接为：https://github.com/73410/news.github.io/issues/41
