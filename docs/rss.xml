@@ -1,15 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Tue, 29 Apr 2025 11:38:20 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>三周目指令大全</title><link>https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-da-quan.html</link><description># 服务器插件功能介绍与玩家指令大全
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Tue, 29 Apr 2025 14:16:47 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>三周目指令大全</title><link>https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-da-quan.html</link><description># 服务器插件功能介绍与玩家指令大全
 
-以下是 Minecraft Java版 **1.21.4** 服务器所安装插件的功能说明和玩家可用指令列表。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-da-quan.html</guid><pubDate>Tue, 29 Apr 2025 11:37:53 +0000</pubDate></item><item><title>brockh090生电技术需要改进</title><link>https://73410.github.io/news.github.io/post/brockh090-sheng-dian-ji-shu-xu-yao-gai-jin.html</link><description>反馈人：孙棉棉
-
-问题描述：brockh090在生电技术方面表现不佳，特别是屠龙炮的制作上存在不足。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/brockh090-sheng-dian-ji-shu-xu-yao-gai-jin.html</guid><pubDate>Tue, 29 Apr 2025 08:41:14 +0000</pubDate></item><item><title>AI答复中存在错误</title><link>https://73410.github.io/news.github.io/post/AI-da-fu-zhong-cun-zai-cuo-wu.html</link><description>我在服务器中用/ai询问问题，可他的答复中有错误，lion不是服务器管理员。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/AI-da-fu-zhong-cun-zai-cuo-wu.html</guid><pubDate>Sun, 20 Apr 2025 08:41:20 +0000</pubDate></item><item><title>新三周目指令大全（下）</title><link>https://73410.github.io/news.github.io/post/xin-san-zhou-mu-zhi-ling-da-quan-%EF%BC%88-xia-%EF%BC%89.html</link><description>## HeadDatabase 插件
-
-HeadDatabase（头颅数据库）提供了大量定制的装饰头颅，允许玩家通过 GUI 浏览并获取各种头颅（包括玩家头和自定义纹理头）。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/xin-san-zhou-mu-zhi-ling-da-quan-%EF%BC%88-xia-%EF%BC%89.html</guid><pubDate>Wed, 05 Mar 2025 07:22:38 +0000</pubDate></item><item><title>新三周目指令大全（上）</title><link>https://73410.github.io/news.github.io/post/xin-san-zhou-mu-zhi-ling-da-quan-%EF%BC%88-shang-%EF%BC%89.html</link><description>## BlueMap 插件
-
-BlueMap 提供 3D Web 地图展示服务器世界，通常无需手动指令即可自动渲染更新地图，但也提供了一系列管理指令：
-
-- **`/bluemap`** – **显示 BlueMap 渲染状态**。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/xin-san-zhou-mu-zhi-ling-da-quan-%EF%BC%88-shang-%EF%BC%89.html</guid><pubDate>Wed, 05 Mar 2025 07:21:56 +0000</pubDate></item><item><title>传送指令现已上线</title><link>https://73410.github.io/news.github.io/post/chuan-song-zhi-ling-xian-yi-shang-xian.html</link><description>使用/tpp &lt;玩家名字&gt;
+以下是 Minecraft Java版 **1.21.4** 服务器所安装插件的功能说明和玩家可用指令列表。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-da-quan.html</guid><pubDate>Tue, 29 Apr 2025 11:37:53 +0000</pubDate></item><item><title>传送指令现已上线</title><link>https://73410.github.io/news.github.io/post/chuan-song-zhi-ling-xian-yi-shang-xian.html</link><description>使用/tpp &lt;玩家名字&gt;
 即可发送传送请求
 &gt; [!TIP]
 &gt; 传送会消耗金钱，跨纬度会增加。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/chuan-song-zhi-ling-xian-yi-shang-xian.html</guid><pubDate>Sun, 26 Jan 2025 11:53:39 +0000</pubDate></item><item><title>电梯数据包使用</title><link>https://73410.github.io/news.github.io/post/dian-ti-shu-ju-bao-shi-yong.html</link><description> ## 1. 获取旗帜&#13;
@@ -40,8 +32,7 @@ BlueMap 提供 3D Web 地图展示服务器世界，通常无需手动指令即�
 - likeking&#13;
 - wzyword&#13;
 - vex&#13;
-。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/xin-de-deng-lu-xi-tong-qi-yong.html</guid><pubDate>Sat, 31 Aug 2024 13:34:20 +0000</pubDate></item><item><title>24w33a更新</title><link>https://73410.github.io/news.github.io/post/24w33a-geng-xin.html</link><description>## 实验性特性&#13;
-下列更改仅在其实验性开关打开时生效，可以通过激活相应的数据包或者在创建世界时在实验性界面打开。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/24w33a-geng-xin.html</guid><pubDate>Fri, 16 Aug 2024 08:45:39 +0000</pubDate></item><item><title>《PCC服务器治安管理处罚条例》</title><link>https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</link><description>违规玩家将收到应有的惩罚！！！&#13;
+。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/xin-de-deng-lu-xi-tong-qi-yong.html</guid><pubDate>Sat, 31 Aug 2024 13:34:20 +0000</pubDate></item><item><title>《PCC服务器治安管理处罚条例》</title><link>https://73410.github.io/news.github.io/post/%E3%80%8APCC-fu-wu-qi-zhi-an-guan-li-chu-fa-tiao-li-%E3%80%8B.html</link><description>违规玩家将收到应有的惩罚！！！&#13;
 # 一、前言:&#13;
 &gt; [!NOTE]&#13;
 &gt; 下列规定中**最左侧**的`字母`为该类违规所属的`违规等级`&#13;
@@ -118,17 +109,7 @@ QuickShop-Hikari 箱子商店的详细用法如下&#13;
 3.使用指令/res set 来设置领地权限&#13;
 更多内容在游戏中使用/res来自行查看&#13;
 ## 2.选择区域&#13;
-- **/res select [x y z]**: 使用该命令选择一个立方体区域。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/ling-di-cha-jian-shi-yong-zhi-nan.html</guid><pubDate>Sat, 29 Jun 2024 13:31:29 +0000</pubDate></item><item><title>6月29日更新公告 </title><link>https://73410.github.io/news.github.io/post/6-yue-29-ri-geng-xin-gong-gao-%20.html</link><description>## 一、 主要更新&#13;
-1. 将服务器版本更新至**1.20.6**&#13;
-2. 更新了**velocity**&#13;
-3. 对一些插件和数据包进行了更改以适应版本更新&#13;
-## 二、对插件做了以下更改&#13;
-- 更新了卫星地图插件&#13;
-- 删除了playercdk&#13;
-- 删除了blocklocker&#13;
-## 三、删除了数据包&#13;
-删除了一个数据包以适应版本更新。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/6-yue-29-ri-geng-xin-gong-gao-%20.html</guid><pubDate>Sat, 29 Jun 2024 12:40:26 +0000</pubDate></item><item><title>6月22日更新公告</title><link>https://73410.github.io/news.github.io/post/6-yue-22-ri-geng-xin-gong-gao.html</link><description>## 1. 故障及简述&#13;
-由于回档插件数据库故障导致服务器无法正常运行，经综合考虑决定**删除**旧的数据。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/6-yue-22-ri-geng-xin-gong-gao.html</guid><pubDate>Sat, 22 Jun 2024 10:06:45 +0000</pubDate></item><item><title>ip端口</title><link>https://73410.github.io/news.github.io/post/ip-duan-kou.html</link><description>## Java版&#13;
+- **/res select [x y z]**: 使用该命令选择一个立方体区域。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/ling-di-cha-jian-shi-yong-zhi-nan.html</guid><pubDate>Sat, 29 Jun 2024 13:31:29 +0000</pubDate></item><item><title>ip端口</title><link>https://73410.github.io/news.github.io/post/ip-duan-kou.html</link><description>## Java版&#13;
 ip：**srv.mcpcc.fun**&#13;
 端口：**25565**&#13;
 ## 基岩版&#13;
