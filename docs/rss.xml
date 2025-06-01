@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sun, 01 Jun 2025 10:19:09 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>[举报]玩家ram涉嫌使用矿透</title><link>https://73410.github.io/news.github.io/post/%5B-ju-bao-%5D-wan-jia-ram-she-xian-shi-yong-kuang-tou.html</link><description>**玩家名称**: ram
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sun, 01 Jun 2025 14:15:35 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>[举报]玩家ram涉嫌使用矿透</title><link>https://73410.github.io/news.github.io/post/%5B-ju-bao-%5D-wan-jia-ram-she-xian-shi-yong-kuang-tou.html</link><description>**玩家名称**: ram
 **违规行为**: 使用矿透(X-Ray)
 **发生时间**: 2025-06-01
 **证据描述**: 异常直线挖矿路线
@@ -28,7 +28,8 @@
 指令 | 用途 | 所需权限 | 备注
 -- | -- | -- | --
 /sg &lt;buy,sell&gt;| 打开主商店 GUI | shop.use | 玩家常用
-/shop sell &lt;手中物品&gt; &lt;数量&gt; | 立即出售 | shop.sell | 无 GUI 快捷出售
+/shop sell &lt;物品&gt; &lt;数量&gt; | 立即出售 | shop.sell | 无 GUI 快捷出售
+/shop sellhand | 立即出售手上的物品 | shop.sell | 无 GUI 快捷出售
 /shop buy &lt;物品ID&gt; &lt;数量&gt; | 立即购买 | shop.buy | 支持 Tab 补全
 /shop reload | 重载配置 | shop.admin | 不需重启服务器
 /shop stock set &lt;物品ID&gt; &lt;数量&gt; | 调整库存 | shop.admin | 管理员调价

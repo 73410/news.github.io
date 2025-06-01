@@ -33,7 +33,8 @@
 指令 | 用途 | 所需权限 | 备注
 -- | -- | -- | --
 /sg <buy,sell>| 打开主商店 GUI | shop.use | 玩家常用
-/shop sell <手中物品> <数量> | 立即出售 | shop.sell | 无 GUI 快捷出售
+/shop sell <物品> <数量> | 立即出售 | shop.sell | 无 GUI 快捷出售
+/shop sellhand | 立即出售手上的物品 | shop.sell | 无 GUI 快捷出售
 /shop buy <物品ID> <数量> | 立即购买 | shop.buy | 支持 Tab 补全
 /shop reload | 重载配置 | shop.admin | 不需重启服务器
 /shop stock set <物品ID> <数量> | 调整库存 | shop.admin | 管理员调价
@@ -65,7 +66,8 @@
 指令 | 用途 | 所需权限 | 备注
 -- | -- | -- | --
 /sg <buy,sell>| 打开主商店 GUI | shop.use | 玩家常用
-/shop sell <手中物品> <数量> | 立即出售 | shop.sell | 无 GUI 快捷出售
+/shop sell <物品> <数量> | 立即出售 | shop.sell | 无 GUI 快捷出售
+/shop sellhand | 立即出售手上的物品 | shop.sell | 无 GUI 快捷出售
 /shop buy <物品ID> <数量> | 立即购买 | shop.buy | 支持 Tab 补全
 /shop reload | 重载配置 | shop.admin | 不需重启服务器
 /shop stock set <物品ID> <数量> | 调整库存 | shop.admin | 管理员调价
@@ -227,8 +229,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>玩家常用</td>
 </tr>
 <tr>
-<td>/shop sell &lt;手中物品&gt; &lt;数量&gt;</td>
+<td>/shop sell &lt;物品&gt; &lt;数量&gt;</td>
 <td>立即出售</td>
+<td>shop.sell</td>
+<td>无 GUI 快捷出售</td>
+</tr>
+<tr>
+<td>/shop sellhand</td>
+<td>立即出售手上的物品</td>
 <td>shop.sell</td>
 <td>无 GUI 快捷出售</td>
 </tr>
