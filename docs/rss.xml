@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sun, 01 Jun 2025 16:15:54 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>三周目指令补充</title><link>https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-bu-chong.html</link><description># 签到系统
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Mon, 02 Jun 2025 02:12:02 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>【城市生存】指令不可用问题反馈</title><link>https://73410.github.io/news.github.io/post/%E3%80%90-cheng-shi-sheng-cun-%E3%80%91-zhi-ling-bu-ke-yong-wen-ti-fan-kui.html</link><description>### 问题描述
+在城市生存模式中无法使用/ai等基础指令
+
+### 玩家信息
+- 游戏ID：cike
+- 发生时间：2025年6月2日
+
+### 必要信息
+1. 坐标位置：请按F3查看后填写___
+2. 错误截图：请上传至图床后粘贴链接___
+3. 其他说明：___。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/%E3%80%90-cheng-shi-sheng-cun-%E3%80%91-zhi-ling-bu-ke-yong-wen-ti-fan-kui.html</guid><pubDate>Mon, 02 Jun 2025 02:11:32 +0000</pubDate></item><item><title>三周目指令补充</title><link>https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-bu-chong.html</link><description># 签到系统
 
 指令 | 参数示例 | 功能 | 默认权限
 -- | -- | -- | --
