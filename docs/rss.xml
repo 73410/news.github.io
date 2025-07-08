@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Sun, 29 Jun 2025 16:16:04 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>三周目指令补充</title><link>https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-bu-chong.html</link><description># 签到系统
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Tue, 08 Jul 2025 09:24:31 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>7月8日更新公告</title><link>https://73410.github.io/news.github.io/post/7-yue-8-ri-geng-xin-gong-gao.html</link><description>1. 现在基岩版进入服务器不需要安装材质包了 
+&gt; [!NOTE]
+&gt; 因为无法正常下载材质包
+3. 现在如果你有正版账号，基岩版可以直接绑定你的java版账号，实现名称同步
+&gt; [!TIP]
+&gt; [点击此处绑定](https://link.geysermc.org/)
+4. 最近服务器出现一些连接问题可以在服务器里使用`/ai 我要反馈xxxxx`来进行反馈。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/7-yue-8-ri-geng-xin-gong-gao.html</guid><pubDate>Tue, 08 Jul 2025 09:24:01 +0000</pubDate></item><item><title>三周目指令补充</title><link>https://73410.github.io/news.github.io/post/san-zhou-mu-zhi-ling-bu-chong.html</link><description># 签到系统
 
 指令 | 参数示例 | 功能 | 默认权限
 -- | -- | -- | --
