@@ -101,7 +101,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>服务器启用新的验证系统，必须要<strong>绑定邮箱</strong>才能进去游戏！！！<br>
 （如果没有邮箱，可以<a href="https://qm.qq.com/cgi-bin/qm/qr?k=IN_EHEI0R8G_cji3laxoS_g9YxHcx1NF&amp;jump_from=webapi&amp;authKey=VH21pBOzskhbjIx9gc95OoCI02FIVn42saJddZebJaIkO6cQ+eVVE005lr7yos2y" rel="nofollow">加入QQ群</a>联系以下人员<strong>获取uuid</strong>）</p>
-<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>请妥善保管获取到的uuid，否则后果自负</p>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>请妥善保管获取到的uuid，否则后果自负</p>
 </div>
 <h2>可获取uuid人员：</h2>
 <ul>
@@ -133,7 +133,7 @@ if(""!=""){
     var startSite=new Date("");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>
@@ -178,6 +178,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");
