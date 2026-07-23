@@ -1,5 +1,60 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://www.mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Tue, 21 Jul 2026 00:11:56 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>pcc生存服四周目正式启动</title><link>https://73410.github.io/news.github.io/post/pcc-sheng-cun-fu-si-zhou-mu-zheng-shi-qi-dong.html</link><description>第四周目删档技术性测试已经结束，PlayChessClub管理委员会筹划了一系列活动，准备了一系列**实物奖品**，请大家捧个场，非常感谢
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>pcc新闻主页</title><link>https://73410.github.io/news.github.io</link><description>pcc的新闻/公告/玩法的说明页</description><copyright>pcc新闻主页</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>http://www.mcpcc.fun/static/picture/logo.webp</url><title>avatar</title><link>https://73410.github.io/news.github.io</link></image><lastBuildDate>Thu, 23 Jul 2026 06:39:04 +0000</lastBuildDate><managingEditor>pcc新闻主页</managingEditor><ttl>60</ttl><webMaster>pcc新闻主页</webMaster><item><title>PCC Insurance 玩家手册</title><link>https://73410.github.io/news.github.io/post/PCC%20Insurance%20-wan-jia-shou-ce.html</link><description>## Contents
+
+
+## PCC Insurance玩家手册
+
+## 目录
+
+- 1. 保险类型
+
+- 2. 玩家使用教程
+
+- 3. 指令与Tab补全
+
+- 4. 价格与优惠计算
+
+- 5. 数据库与可靠性
+
+- 6. 常见问题
+
+## 1. 保险类型
+
+| 类型 | 保护内容 | 默认主世界价格 |
+| --- | --- | --- |
+| 基础保险 | 背包36格及快捷栏，不含 | 5000 |
+|   | 盔甲和副手 |   |
+| 装备保险 | 盔甲、当前主手和副手 | 3000 |
+| 贵重物品保险 | 附魔、稀有材质、自定义名 | 3500 |
+|   | 称、Lore、模型数据、 |   |
+|   | ItemMeta/PDC物品 |   |
+| 经验保险 | 保留死亡前整数等级，当前 | 2500 |
+|   | 等级进度清零 |   |
+
+
+类型
+
+保护内容
+
+掉落回收保险
+
+默认主世界价格
+
+将未保护的物品放入本人专
+
+4500
+
+属实体保险箱
+
+高级保险
+
+同时保护背包、装备和整数
+
+9000
+
+等级
+
+每次购买获得一份额度。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/PCC%20Insurance%20-wan-jia-shou-ce.html</guid><pubDate>Thu, 23 Jul 2026 06:34:48 +0000</pubDate></item><item><title>pcc生存服四周目正式启动</title><link>https://73410.github.io/news.github.io/post/pcc-sheng-cun-fu-si-zhou-mu-zheng-shi-qi-dong.html</link><description>第四周目删档技术性测试已经结束，PlayChessClub管理委员会筹划了一系列活动，准备了一系列**实物奖品**，请大家捧个场，非常感谢
 
 &lt;img width='1672' height='941' alt='Image' src='https://github.com/user-attachments/assets/4cb9a8ef-2cb6-4fab-8928-7803c7cced1b' /&gt;。</description><guid isPermaLink="true">https://73410.github.io/news.github.io/post/pcc-sheng-cun-fu-si-zhou-mu-zheng-shi-qi-dong.html</guid><pubDate>Tue, 21 Jul 2026 00:06:30 +0000</pubDate></item><item><title>四周目测试已开启</title><link>https://73410.github.io/news.github.io/post/si-zhou-mu-ce-shi-yi-kai-qi.html</link><description>服务器ip：srv.mcpcc.fun
 关注公众号获取更多消息和ai问答

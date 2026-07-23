@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="http://www.mcpcc.fun/static/picture/logo.webp"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="## Contents
+
+
+## PCC Insurance玩家手册
+
+## 目录
+
+- 1. 保险类型
+
+- 2. 玩家使用教程
+
+- 3. 指令与Tab补全
+
+- 4. 价格与优惠计算
+
+- 5. 数据库与可靠性
+
+- 6. 常见问题
+
+## 1. 保险类型
+
+| 类型 | 保护内容 | 默认主世界价格 |
+| --- | --- | --- |
+| 基础保险 | 背包36格及快捷栏，不含 | 5000 |
+|   | 盔甲和副手 |   |
+| 装备保险 | 盔甲、当前主手和副手 | 3000 |
+| 贵重物品保险 | 附魔、稀有材质、自定义名 | 3500 |
+|   | 称、Lore、模型数据、 |   |
+|   | ItemMeta/PDC物品 |   |
+| 经验保险 | 保留死亡前整数等级，当前 | 2500 |
+|   | 等级进度清零 |   |
+
+
+类型
+
+保护内容
+
+掉落回收保险
+
+默认主世界价格
+
+将未保护的物品放入本人专
+
+4500
+
+属实体保险箱
+
+高级保险
+
+同时保护背包、装备和整数
+
+9000
+
+等级
+
+每次购买获得一份额度。">
+<meta property="og:title" content="PCC Insurance 玩家手册">
+<meta property="og:description" content="## Contents
+
+
+## PCC Insurance玩家手册
+
+## 目录
+
+- 1. 保险类型
+
+- 2. 玩家使用教程
+
+- 3. 指令与Tab补全
+
+- 4. 价格与优惠计算
+
+- 5. 数据库与可靠性
+
+- 6. 常见问题
+
+## 1. 保险类型
+
+| 类型 | 保护内容 | 默认主世界价格 |
+| --- | --- | --- |
+| 基础保险 | 背包36格及快捷栏，不含 | 5000 |
+|   | 盔甲和副手 |   |
+| 装备保险 | 盔甲、当前主手和副手 | 3000 |
+| 贵重物品保险 | 附魔、稀有材质、自定义名 | 3500 |
+|   | 称、Lore、模型数据、 |   |
+|   | ItemMeta/PDC物品 |   |
+| 经验保险 | 保留死亡前整数等级，当前 | 2500 |
+|   | 等级进度清零 |   |
+
+
+类型
+
+保护内容
+
+掉落回收保险
+
+默认主世界价格
+
+将未保护的物品放入本人专
+
+4500
+
+属实体保险箱
+
+高级保险
+
+同时保护背包、装备和整数
+
+9000
+
+等级
+
+每次购买获得一份额度。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://73410.github.io/news.github.io/post/PCC%20Insurance%20-wan-jia-shou-ce.html">
+<meta property="og:image" content="http://www.mcpcc.fun/static/picture/logo.webp">
+<title>PCC Insurance 玩家手册</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">PCC Insurance 玩家手册</h1>
+<div class="title-right">
+    <a href="https://73410.github.io/news.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/73410/news.github.io/issues/55" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2>Contents</h2>
+<h2>PCC Insurance玩家手册</h2>
+<h2>目录</h2>
+<ul>
+<li>
+<ol>
+<li>保险类型</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>玩家使用教程</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>指令与Tab补全</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>价格与优惠计算</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>数据库与可靠性</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>常见问题</li>
+</ol>
+</li>
+</ul>
+<h2>1. 保险类型</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>类型</th>
+<th>保护内容</th>
+<th>默认主世界价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基础保险</td>
+<td>背包36格及快捷栏，不含</td>
+<td>5000</td>
+</tr>
+<tr>
+<td></td>
+<td>盔甲和副手</td>
+<td></td>
+</tr>
+<tr>
+<td>装备保险</td>
+<td>盔甲、当前主手和副手</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>贵重物品保险</td>
+<td>附魔、稀有材质、自定义名</td>
+<td>3500</td>
+</tr>
+<tr>
+<td></td>
+<td>称、Lore、模型数据、</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ItemMeta/PDC物品</td>
+<td></td>
+</tr>
+<tr>
+<td>经验保险</td>
+<td>保留死亡前整数等级，当前</td>
+<td>2500</td>
+</tr>
+<tr>
+<td></td>
+<td>等级进度清零</td>
+<td></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>类型</p>
+<p>保护内容</p>
+<p>掉落回收保险</p>
+<p>默认主世界价格</p>
+<p>将未保护的物品放入本人专</p>
+<p>4500</p>
+<p>属实体保险箱</p>
+<p>高级保险</p>
+<p>同时保护背包、装备和整数</p>
+<p>9000</p>
+<p>等级</p>
+<p>每次购买获得一份额度。普通区域死亡消耗一份，高风险区域死亡需要并消耗两份。高风险区域只</p>
+<p>有一份时不会部分消耗。</p>
+<p>物品保险只选择一个产品，优先级为：</p>
+<p>高级保险 &gt; 基础保险 &gt; 装备保险 &gt; 贵重物品保险</p>
+<p>高级保险已包含经验，不会重复消耗经验险。没有高级保险时，经验险可与一个物品险同时触发。</p>
+<p>回收险只处理仍未保护的掉落；未被其他保险保护的剩余物品正常掉落。</p>
+<p>同类保障同时存在维度专属与跨维度额度时，优先使用维度专属额度。保单默认有效7天，每种产</p>
+<p>品与范围默认最多持有10份。</p>
+<h2>2. 玩家使用教程</h2>
+<p>执行/insurance打开保险商店：</p>
+<ul>
+<li>
+<ol>
+<li>点击一种保险产品。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>选择具体世界或”跨维度”。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>确认界面会列出基础价格、近期死亡数、倍率、新手优惠、续保优惠和最终价格。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>点击绿色玻璃确认购买，余额不足或处于理赔冷却时不会扣款。</li>
+</ol>
+</li>
+<li>
+<p>・ 当前保单：显示每份额度、范围、来源、实付金额和到期时间。</p>
+</li>
+<li>
+<p>・ 理赔记录：最多显示最近100次保险触发记录。</p>
+</li>
+<li>
+<p>・ 退保：点击具体有效额度并二次确认，返还实付金额的80%。</p>
+</li>
+<li>
+<p>・ ActionBar：开启或关闭当前维度保险状态。</p>
+</li>
+</ul>
+<h2>主菜单下方还可查看：</h2>
+<h2>2.1 死亡与复活</h2>
+<p>死亡时插件会先保存理赔数据，再从掉落列表中移除受保护物品。复活后物品恢复到原栏位；栏位</p>
+<p>被其他插件占用时，物品会掉落在复活点，避免覆盖。</p>
+<p>复活后聊天栏显示触发的保险、消耗额度、保护数量、经验等级、赔付金额或保险箱坐标。没有触</p>
+<p>发时会说明无适用保单、维度不匹配或高风险额度不足。</p>
+<h2>2.2 实体保险箱</h2>
+<p>回收险会在死亡点附近寻找有实体方块支撑的空气位置，并生成单箱或双箱：</p>
+<ul>
+<li>
+<p>・ 只有死亡玩家本人可以打开。</p>
+</li>
+<li>
+<p>・ 保险箱不能被玩家破坏、爆炸、活塞或漏斗移动。</p>
+</li>
+<li>
+<p>・ 默认存在30分钟，取空后立即移除。</p>
+</li>
+<li>
+<p>・ 到期后箱子消失，剩余物品在原位置正常掉落并失去所有权保护。</p>
+</li>
+<li>
+<p>・ 区块未加载时不会强制加载，到期处理会延迟至区块再次加载。</p>
+</li>
+<li>
+<p>・ 找不到安全位置时不消耗回收险，物品保持正常掉落。</p>
+</li>
+</ul>
+<h2>2.3 到期提醒与ActionBar</h2>
+<p>登录时，插件会汇总 24 小时内即将到期以及离线期间已经到期的保单。永久的管理员保单不参与</p>
+<p>到期提醒。</p>
+<p>ActionBar 采用事件驱动，只在切换世界、购买、退保、实际理赔、管理员修改、在线保单到期或</p>
+<p>玩家主动开启显示时出现一次：</p>
+<p>当前维度保险：已启用（3份/2种）</p>
+<p>它只表示当前维度有可用额度，不会定时重复占用ActionBar，也不会周期性搜索当前结构。使用</p>
+<p>/insurance actionbar可以为自己永久开关显示。</p>
+<h2>3. 指令与Tab补全</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/insurance</td>
+<td>打开商店</td>
+<td>insurance.use</td>
+</tr>
+<tr>
+<td>/insurance status</td>
+<td>查看当前保单</td>
+<td>insurance.use</td>
+</tr>
+<tr>
+<td>/insurance cancel</td>
+<td>打开可退保保单</td>
+<td>insurance.use</td>
+</tr>
+<tr>
+<td>/insurance logs</td>
+<td>查看理赔日志</td>
+<td>insurance.logs</td>
+</tr>
+<tr>
+<td>/insurance actionbar</td>
+<td>开关状态栏</td>
+<td>insurance.use</td>
+</tr>
+<tr>
+<td>/insurance admin &lt; 玩家 &gt;</td>
+<td>管理指定玩家</td>
+<td>insurance.admin.view</td>
+</tr>
+<tr>
+<td>/insurance reload</td>
+<td>重载并校验配置</td>
+<td>insurance.reload</td>
+</tr>
+<tr>
+<td>/insurance help</td>
+<td>显示可用帮助 无</td>
+<td></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>别名/ins与/insurance相同。</p>
+<p>所有子命令均支持Tab补全：补全会忽略大小写、排序、去重并按照发送者权限过滤。普通玩家看</p>
+<p>不到 admin 或 reload；admin 的第二个参数会补全在线玩家及保险数据库中已知的离线玩家。控 制台仅补全可在控制台使用且有权限的命令。</p>
+<h2>3.1 权限默认值</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>权限</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insurance.use</td>
+<td>所有玩家</td>
+</tr>
+<tr>
+<td>insurance.logs</td>
+<td>所有玩家</td>
+</tr>
+<tr>
+<td>insurance.admin.view</td>
+<td>OP</td>
+</tr>
+<tr>
+<td>insurance.admin.modify</td>
+<td>OP</td>
+</tr>
+<tr>
+<td>insurance.reload</td>
+<td>OP</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>4. 价格与优惠计算</h2>
+<p>默认统计最近7天全部死亡，无论是否触发保险。每次死亡增加10%，最高为基础价2倍。前三笔</p>
+<p>成功购买半价；未理赔自然到期的产品会给下一份相同产品和范围一次九折资格。</p>
+<p>计算顺序：</p>
+<p>最终价格 = 基础价格 × 死亡倍率 × 续保折扣 × 新手折扣</p>
+<p>例如主世界基础保险价格5000，最近死亡 2次、仍处于前三笔、没有续保优惠：</p>
+<p>5000 × 1.2 × 0.5 = 3000</p>
+<p>任何保单实际理赔后，15分钟内不能购买新额度，但已经持有的其他额度仍然有效。</p>
+<h2>5. 数据库与可靠性</h2>
+<p>SQLite使用WAL、外键和5秒忙等待。数据包括玩家设置、死亡计价历史、每份保单、续保资格、</p>
+<p>理赔、待恢复物品、保险箱、待处理款项和管理员审计。</p>
+<p>Vault 退款或赔付失败时不会静默丢失：款项进入 pending_money，插件每分钟重试。死亡时受保</p>
+<p>物品会先写入 pending_restores，玩家复活或下次登录时恢复。理赔日志默认保留180天，计价 死亡历史保留7天。</p>
+<p>不要手工编辑运行中的数据库。需要迁移数据时，关闭服务器后复制整个插件数据目录。</p>
+<h2>6. 常见问题</h2>
+<h2>6.1 插件启动后立即禁用</h2>
+<p>检查是否安装Vault和一个经济插件，并确认控制台出现Vault Economy服务名称。只有Vault本</p>
+<p>体、没有经济实现时仍然无法启动。</p>
+<h2>6.2 GUI中没有自己的世界</h2>
+<p>pricing.worlds的世界名与实际世界文件夹名不一致。使用服务器实际名称新增完整的六种价格，</p>
+<p>然后重载。</p>
+<h2>6.3 余额足够却不能购买</h2>
+<p>检查是否处于理赔后的15分钟冷却、该产品和范围是否已达到10份上限，以及Vault 经济插件是</p>
+<p>否正常。</p>
+<h2>6.4 高风险结构没有生效</h2>
+<p>确认 namespaced key 正确、结构已经生成，并且死亡所在区块处于加载状态。可增加</p>
+<p>structure-padding-blocks，但插件不会为了识别结构强制加载新区块。</p>
+<h2>6.5 没有生成保险箱</h2>
+<p>死亡点搜索半径内必须存在空气方块，且下方为可支撑方块。找不到位置时物品正常掉落且不会扣</p>
+<p>回收险。</p>
+<h2>6.6 配置重载失败</h2>
+<p>检查YAML缩进、材质名、七种产品价格是否齐全及数值是否非负。失败时当前运行配置不会被替</p>
+<p>换，详细原因会写入控制台。</p>
+<h2>6.7 ActionBar覆盖其他插件</h2>
+<p>ActionBar 已经只在保险或世界状态变化时显示一次。玩家仍可执行 /insurance actionbar 将其</p>
+<p>完全关闭。</p>
+<p>PCC服务器・保险插件玩家手册</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://73410.github.io/news.github.io">pcc新闻主页</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","73410/news.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
